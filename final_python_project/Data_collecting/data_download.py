@@ -1,4 +1,5 @@
 import requests
+import json
 
 API_KEY = '7b3c54a6-de7a-46a4-9a83-4a2e9597e22e'
 
@@ -20,7 +21,6 @@ def create_params(**kwargs):
         if value != None:
             res_dict[key] = value
           
-    print(res_dict)
     return res_dict
 
 def get_data(url, parameters):
@@ -30,26 +30,49 @@ def get_data(url, parameters):
     else:
         return None
 
-
-def get_public_transport_routes(api_key = API_KEY, **kwargs):
-    parameters = create_params(apikey = api_key)
-    data = get_data(PUBLIC_TRANSPORT_ROUTES_URL, parameters)
-    return data
-    
-def get_bus_stop_coordinates(api_key = API_KEY, resource_id = BUS_STOP_COORDINATES_RESRC_ID, sortBy = None, size = None, **kwargs):
-    parameters = create_params(apikey = api_key, id = resource_id, sortBy = sortBy, size = size)
+def get_bus_stop_informations(api_key = API_KEY, 
+                             resource_id = BUS_STOP_COORDINATES_RESRC_ID,
+                             sortBy = None, 
+                             size = None, 
+                             **kwargs):
+    parameters = create_params(apikey = api_key, 
+                               id = resource_id, 
+                               sortBy = sortBy, 
+                               size = size)
     data = get_data(BUS_STOP_COORDINATES_URL, parameters)
-    return data
+    return data['result']
 
-def get_curr_position_of_buses(api_key = API_KEY, resource_id = CURRENT_BUSES_POSITIONS_RESRC_ID, line = None, **kwargs):
+def get_curr_position_of_buses(api_key = API_KEY, 
+                               resource_id = CURRENT_BUSES_POSITIONS_RESRC_ID, 
+                               line = None, 
+                               **kwargs):
     we_want_buses = 1
-    parameters = create_params(apikey = api_key, resource_id = resource_id, line = line, type = we_want_buses)
+    parameters = create_params(apikey = api_key, 
+                               resource_id = resource_id, 
+                               line = line, 
+                               type = we_want_buses)
     data = get_data(CURRENT_BUSES_POSITIONS_URL, parameters)
-    return data
+    return data['result']
 
-def get_bus_time_table(api_key = API_KEY, resource_id = BUS_TIME_TABLE_RESRC_ID, bus_stop_nr = None, bus_stop_id = None, line = None, **kwargs):
-    parameters = create_params(apikey = api_key, id = resource_id, busstopNr = bus_stop_nr, busstopId = bus_stop_id, line = line)
+def get_bus_time_table(api_key = API_KEY, 
+                       resource_id = BUS_TIME_TABLE_RESRC_ID,
+                       bus_stop_nr = None, 
+                       bus_stop_id = None, 
+                       line = None, 
+                       **kwargs):
+    parameters = create_params(apikey = api_key, 
+                               id = resource_id, 
+                               busstopNr = bus_stop_nr, 
+                               busstopId = bus_stop_id, 
+                               line = line)
     data = get_data(BUS_TIME_TABLE_URL, parameters)
     return data
 
-print(get_bus_time_table(bus_stop_id = 7009, bus_stop_nr = '01', line = 523))
+
+def print_readable(data):
+    json_str = json.dumps(data, indent=2)
+    print(json_str)
+    
+# print(print_readable(get_bus_stop_coordinates()))
+
+print_readable(get_curr_position_of_buses()['result'][0])
