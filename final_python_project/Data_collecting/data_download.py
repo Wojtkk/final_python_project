@@ -29,6 +29,11 @@ def get_data(url, parameters):
         return response.json()
     else:
         return None
+    
+def get_public_transport_routes(api_key = API_KEY, **kwargs):
+    parameters = create_params(apikey = api_key)
+    data = get_data(PUBLIC_TRANSPORT_ROUTES_URL, parameters)
+    return data['result']
 
 def get_bus_stop_informations(api_key = API_KEY, 
                              resource_id = BUS_STOP_COORDINATES_RESRC_ID,
@@ -73,6 +78,6 @@ def print_readable(data):
     json_str = json.dumps(data, indent=2)
     print(json_str)
     
-# print(print_readable(get_bus_stop_coordinates()))
+print_readable(get_bus_stop_informations())
 
-print_readable(get_curr_position_of_buses()['result'][0])
+
