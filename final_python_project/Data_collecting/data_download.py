@@ -78,6 +78,6 @@ def print_readable(data):
     json_str = json.dumps(data, indent=2)
     print(json_str)
     
-print_readable(get_bus_stop_informations())
+# print_readable(get_bus_stop_informations())
 
 

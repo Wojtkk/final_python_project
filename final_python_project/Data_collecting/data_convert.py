@@ -1,5 +1,6 @@
 import pandas as pd 
 import data_download as dd
+import json
 
 LINE = 'line'
 NUM_OF_STOP = 'nr_przystanku'
@@ -62,8 +63,6 @@ def create_dataframe_with_time_tables(stops_of_buses):
         break
     
         
-    
-    
 stops_of_buses = create_dataframe_with_stops_of_buses()
-print(stops_of_buses)
-create_dataframe_with_time_tables(stops_of_buses)
+# print(stops_of_buses)
+create_dataframe_with_time_tables(stops_of_buses['result'])
