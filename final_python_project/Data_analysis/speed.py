@@ -24,6 +24,7 @@ def buses_too_fast_through_all_time_intervals(buses_positions_in_all_moments):
     return result_array_of_dataframes
 
 def calculate_percentage_of_too_fast_buses_on_each_road():
+    pass
     
         
     
