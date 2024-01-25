@@ -9,3 +9,12 @@ def calculate_speed_in_km_per_h(coordinates_start, coordinates_end, time_start, 
     
     delta_time_hours = delta_time_seconds / SECONDS_IN_HOUR
     return distance / delta_time_hours
+
+def calculate_middle_point(coords_1, coords_2):
+    half_way = 0.5
+    mid_point = geopy.distance.geodesic(coords_1, coords_2).interpolate(half_way)
+    return mid_point.latitude, mid_point.longitude
+    
+
+        
+    

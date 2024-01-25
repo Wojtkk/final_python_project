@@ -1,4 +1,5 @@
 import pandas as pd 
+from time import sleep
 
 import data_download as dd
 import json
@@ -7,6 +8,9 @@ import json
 LINE = 'line'
 NUM_OF_STOP = 'nr_przystanku'
 NUM_OF_STOP_GROUP = 'nr_zespolu'
+
+POSITIONS_UPDATE_TIME_SEC = 15
+INTERVAL_IN_SECONDS = 16
 
 def create_dataframe_with_stops_of_buses():
     bus_time_table = dd.get_public_transport_routes()
@@ -51,6 +55,18 @@ def create_dataframe_with_curr_position_of_buses():
 
     return df
 
+def create_list_of_dataframes_with_curr_position_of_buses(interval_in_seconds):
+    iterations = interval_in_seconds // POSITIONS_UPDATE_TIME_SEC + 1
+    dataframes = []
+    for i in range(iterations):
+        df = create_dataframe_with_curr_position_of_buses()
+        dataframes.append(df)
+        sleep(POSITIONS_UPDATE_TIME_SEC)
+        
+    concatenated_df = pd.concat(dataframes, axis = 0, ignore_index = True)
+    return concatenated_df
+
+
 def create_dataframe_with_time_tables(stops_of_buses):
     data_for_dataframe_with_time_tables = []
     column_names_for_dataframe_with_time_tables = [LINE]
@@ -58,6 +74,8 @@ def create_dataframe_with_time_tables(stops_of_buses):
 
     for i, row in stops_of_buses.iterrows():
         print(i, len(data_for_dataframe_with_time_tables))
+        if  i >= 3:  # to delete !!
+            break
         line = row[LINE]
         num_of_stop = row[NUM_OF_STOP]
         num_of_stop_group = row[NUM_OF_STOP_GROUP]
@@ -93,11 +111,11 @@ def give_all_dataframes_and_their_titles():
     df_bus_stops = create_dataframe_with_bus_stops()
     dataframes_to_save.append(("bus_stops.csv", df_bus_stops))
     
-    df_curr_position_of_buses = create_dataframe_with_curr_position_of_buses()
+    df_curr_position_of_buses = create_list_of_dataframes_with_curr_position_of_buses(INTERVAL_IN_SECONDS)
     dataframes_to_save.append(("curr_position_of_buses.csv", df_curr_position_of_buses))
     
     df_time_tables = create_dataframe_with_time_tables(df_stops_of_buses)
-    dataframes_to_save.append(("time_tables", df_time_tables)) # we need it, just for case of test
+    dataframes_to_save.append(("time_tables.csv", df_time_tables)) # we need it, just for case of test
     
     return dataframes_to_save    
     

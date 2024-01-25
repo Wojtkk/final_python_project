@@ -9,6 +9,8 @@ def save_all_dataframes_we_need_to_save(name_of_folder_to_save_in):
 
     if not folder.exists():
         folder.mkdir(parents=True)
+    else:
+        raise ValueError("Directory with such name already exist!")
 
     titles_and_dataframes = give_all_dataframes_and_their_titles()
     for index, (filename, dataframe) in enumerate(titles_and_dataframes):
