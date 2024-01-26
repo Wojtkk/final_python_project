@@ -12,6 +12,8 @@ NUM_OF_STOP_GROUP = 'nr_zespolu'
 POSITIONS_UPDATE_TIME_SEC = 15
 INTERVAL_IN_SECONDS = 16
 
+# functions with downloading and saving to dataframe
+
 def create_dataframe_with_stops_of_buses():
     bus_time_table = dd.get_public_transport_routes()
     
@@ -45,6 +47,7 @@ def create_dataframe_with_bus_stops():
     
     df = pd.DataFrame(array_of_rows_with_bus_stop_data, columns = column_names)
     return df
+
 
 def create_dataframe_with_curr_position_of_buses():
     buses_position_data = dd.get_curr_position_of_buses()
@@ -102,19 +105,41 @@ def create_dataframe_with_time_tables(stops_of_buses):
     dataframe = pd.DataFrame(data_for_dataframe_with_time_tables, columns = column_names_for_dataframe_with_time_tables)
     return dataframe
          
+
+# deleting unneccesary columns, changing columns_names
+
+def standarize_dataframe_with_stops_of_buses(df):
+    pass 
+
+def standarize_dataframe_with_bus_stops(df):
+    pass 
+
+def standarize_dataframe_with_curr_position_of_buses(df):
+    pass 
+
+def standarize_datafrae_with_time_tables(df):
+    pass
+         
 def give_all_dataframes_and_their_titles():
     dataframes_to_save = []
     
-    df_stops_of_buses = create_dataframe_with_stops_of_buses()
+    funct_to_creat_and_standarise = lambda creat_fun, stand_fun: stand_fun(creat_fun())
+    
+    df_stops_of_buses = funct_to_creat_and_standarise(create_dataframe_with_stops_of_buses, 
+                                                      standarize_dataframe_with_stops_of_buses)
     dataframes_to_save.append(("stops_of_buses.csv", df_stops_of_buses))
     
+    # to finish
     df_bus_stops = create_dataframe_with_bus_stops()
+    standarize_dataframe_with_bus_stops(df_bus_stops)
     dataframes_to_save.append(("bus_stops.csv", df_bus_stops))
     
     df_curr_position_of_buses = create_list_of_dataframes_with_curr_position_of_buses(INTERVAL_IN_SECONDS)
+    standarize_dataframe_with_curr_position_of_buses(df_curr_position_of_buses)
     dataframes_to_save.append(("curr_position_of_buses.csv", df_curr_position_of_buses))
     
     df_time_tables = create_dataframe_with_time_tables(df_stops_of_buses)
+    standarize_dataframe_with_time_tables(df_time_tables)
     dataframes_to_save.append(("time_tables.csv", df_time_tables)) # we need it, just for case of test
     
     return dataframes_to_save    
