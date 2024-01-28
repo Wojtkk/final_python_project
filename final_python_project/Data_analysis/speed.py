@@ -1,26 +1,34 @@
 import pandas as pd 
 
-from reading_data import give_dataframes_from_right_folder
+from reading_data import give_modified_dataframes_from_dir
 from positions import calculate_speed_in_km_per_h
 from positions import calculate_middle_point
 
-POSITIONS_CSV_FILENAME = 'curr_position_of_buses.csv'
+from reading_data import STOP_ID_STR
+from reading_data import STREET_ID_STR
 
-LINE_STR = 'line'
-LINES_STR = 'Lines'
-VEHICLE_NUMBER_STR = 'VehicleNumber'
+from reading_data import LINE_STR
+from reading_data import DIRECTION_STR
+from reading_data import ROUTE_STR
+
+from reading_data import VEHICLE_NUMBER_STR
+from reading_data import TIME_STR
+
+from reading_data import DISTANCE_STR
+from reading_data import LON_STR
+from reading_data import LAT_STR
+
+from Data_collecting.data_convert import STOPS_ON_ROUTES_FILENAME
+from Data_collecting.data_convert import BUS_STOPS_FILENAME
+from Data_collecting.data_convert import CURR_POSITIONS_OF_BUSES_FILENAME
+from Data_collecting.data_convert import TIME_TABLES_FILENAME
+
 SPEED_STR = 'speed'
-DATE_STR = 'date'
-TIME_STR = 'Time'
-LON_STR = 'Lon'
-LAT_STR = 'Lat'
-
 SPEED_LIMIT = 50
 MAX_MEASURED_SPEED = 100 
 
-def sort_by_time(dataframe, time_column_name):
-    dataframe[time_column_name] = pd.to_datetime(dataframe[time_column_name])
-    df_sorted = dataframe.sort_values(by=time_column_name)
+def sort_by_time(dataframe):
+    df_sorted = dataframe.sort_values(by = TIME_STR)
     return df_sorted
 
 def divide_on_dataframes_by_given_column_name(dataframe, column_name):
@@ -44,14 +52,14 @@ def give_dataframe_of_coords_with_line_and_speed(dataframe):
     
     rows_to_df_of_coords = []
     for vehicle_num, df_with_positions_of_vehicle in dataframes_for_vehicles.items():
-        df_with_positions_of_vehicle = sort_by_time(df_with_positions_of_vehicle, TIME_STR)
+        df_with_positions_of_vehicle = sort_by_time(df_with_positions_of_vehicle)
         
         num_of_rows = df_with_positions_of_vehicle.shape[0]
         for i in range(0, num_of_rows - 1):
             curr_row = df_with_positions_of_vehicle.iloc[i]
             next_row = df_with_positions_of_vehicle.iloc[i + 1]
             
-            line = curr_row[LINES_STR]
+            line = curr_row[LINE_STR]
             time_start = curr_row[TIME_STR]
             time_finish = next_row[TIME_STR] 
             position_start = (curr_row[LON_STR], curr_row[LAT_STR])
@@ -103,16 +111,17 @@ def give_lines_with_most_frequent_overspeed(dataframe, how_many, minimal_num_of_
     
     return result_for_each_line[:max(length, how_many)]
 
+if __name__ == '__main__':
+    dataframes = give_modified_dataframes_from_dir()
 
-dataframes = give_dataframes_from_right_folder()
+    dataframes = dict(dataframes)
+    positions_df = dataframes[CURR_POSITIONS_OF_BUSES_FILENAME]
 
-positions_df = dataframes[POSITIONS_CSV_FILENAME]
+    fast_lines = give_lines_with_most_frequent_overspeed(positions_df, 6)
+    fast_lines = sorted(fast_lines, key = lambda x: x[1])
 
-fast_lines = give_lines_with_most_frequent_overspeed(positions_df, 6)
-fast_lines = sorted(fast_lines, key = lambda x: x[1])
-
-for elem in fast_lines:
-    print(elem)
+    for elem in fast_lines:
+        print(elem)
 
         
     
