@@ -1,0 +1,1459 @@
+line,nr_przystanku,nr_zespolu,symbol_2,symbol_1,brygada,kierunek,trasa,czas
+L51,02,2239,null,o,02,Orla,TO-ORL,04:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,05:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,05:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,06:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,06:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,07:06:00
+L51,02,2239,null,o,02,Orla,TO-ORL,07:47:00
+L51,02,2239,null,o,1,Orla,TO-ORL,08:32:00
+L51,02,2239,null,o,02,Orla,TO-ORL,09:11:00
+L51,02,2239,null,o,1,Orla,TO-ORL,10:11:00
+L51,02,2239,null,o,1,Orla,TO-ORL,11:11:00
+L51,02,2239,null,o,1,Orla,TO-ORL,12:11:00
+L51,02,2239,null,o,1,Orla,TO-ORL,13:31:00
+L51,02,2239,null,o,02,Orla,TO-ORL,14:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,15:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,15:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,16:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,16:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,17:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,17:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,18:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,18:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,19:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,19:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,20:11:00
+L51,02,2239,null,o,02,Orla,TO-ORL,20:51:00
+L51,02,2239,null,o,1,Orla,TO-ORL,21:31:00
+L51,02,2239,null,o,1,Orla,TO-ORL,22:51:00
+L51,02,2237,null,o,02,Orla,TO-ORL,04:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,05:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,05:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,06:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,06:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,07:05:00
+L51,02,2237,null,o,02,Orla,TO-ORL,07:46:00
+L51,02,2237,null,o,1,Orla,TO-ORL,08:31:00
+L51,02,2237,null,o,02,Orla,TO-ORL,09:10:00
+L51,02,2237,null,o,1,Orla,TO-ORL,10:10:00
+L51,02,2237,null,o,1,Orla,TO-ORL,11:10:00
+L51,02,2237,null,o,1,Orla,TO-ORL,12:10:00
+L51,02,2237,null,o,1,Orla,TO-ORL,13:30:00
+L51,02,2237,null,o,02,Orla,TO-ORL,14:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,15:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,15:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,16:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,16:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,17:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,17:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,18:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,18:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,19:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,19:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,20:10:00
+L51,02,2237,null,o,02,Orla,TO-ORL,20:50:00
+L51,02,2237,null,o,1,Orla,TO-ORL,21:30:00
+L51,02,2237,null,o,1,Orla,TO-ORL,22:50:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,04:53:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,05:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,05:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,06:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,06:58:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,07:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,07:58:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,08:58:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,09:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,10:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,11:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,12:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,13:55:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,14:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,15:30:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,15:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,16:30:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,16:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,17:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,17:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,18:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,18:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,19:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,19:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,20:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,20:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,21:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,23:00:00
+L51,02,2868,null,o,02,Orla,TO-ORL,04:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,04:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,05:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,05:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,06:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,06:50:00
+L51,02,2868,null,o,02,Orla,TO-ORL,07:30:00
+L51,02,2868,null,o,1,Orla,TO-ORL,08:15:00
+L51,02,2868,null,o,02,Orla,TO-ORL,08:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,09:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,10:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,11:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,13:15:00
+L51,02,2868,null,o,02,Orla,TO-ORL,14:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,14:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,15:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,15:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,16:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,16:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,17:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,17:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,18:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,18:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,19:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,19:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,20:35:00
+L51,02,2868,null,o,1,Orla,TO-ORL,21:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,22:35:00
+L51,02,2864,null,o,02,Orla,TO-ORL,04:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,04:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,05:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,05:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,06:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,06:53:00
+L51,02,2864,null,o,02,Orla,TO-ORL,07:33:00
+L51,02,2864,null,o,1,Orla,TO-ORL,08:18:00
+L51,02,2864,null,o,02,Orla,TO-ORL,08:58:00
+L51,02,2864,null,o,1,Orla,TO-ORL,09:58:00
+L51,02,2864,null,o,1,Orla,TO-ORL,10:58:00
+L51,02,2864,null,o,1,Orla,TO-ORL,11:58:00
+L51,02,2864,null,o,1,Orla,TO-ORL,13:18:00
+L51,02,2864,null,o,02,Orla,TO-ORL,14:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,14:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,15:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,15:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,16:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,16:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,17:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,17:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,18:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,18:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,19:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,19:58:00
+L51,02,2864,null,o,02,Orla,TO-ORL,20:38:00
+L51,02,2864,null,o,1,Orla,TO-ORL,21:18:00
+L51,02,2864,null,o,1,Orla,TO-ORL,22:38:00
+L51,02,2865,null,o,02,Orla,TO-ORL,04:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,04:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,05:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,05:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,06:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,06:52:00
+L51,02,2865,null,o,02,Orla,TO-ORL,07:32:00
+L51,02,2865,null,o,1,Orla,TO-ORL,08:17:00
+L51,02,2865,null,o,02,Orla,TO-ORL,08:57:00
+L51,02,2865,null,o,1,Orla,TO-ORL,09:57:00
+L51,02,2865,null,o,1,Orla,TO-ORL,10:57:00
+L51,02,2865,null,o,1,Orla,TO-ORL,11:57:00
+L51,02,2865,null,o,1,Orla,TO-ORL,13:17:00
+L51,02,2865,null,o,02,Orla,TO-ORL,14:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,14:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,15:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,15:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,16:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,16:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,17:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,17:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,18:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,18:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,19:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,19:57:00
+L51,02,2865,null,o,02,Orla,TO-ORL,20:37:00
+L51,02,2865,null,o,1,Orla,TO-ORL,21:17:00
+L51,02,2865,null,o,1,Orla,TO-ORL,22:37:00
+L51,02,2870,null,o,02,Orla,TO-ORL,04:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,05:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,05:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,06:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,06:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,06:56:00
+L51,02,2870,null,o,02,Orla,TO-ORL,07:36:00
+L51,02,2870,null,o,1,Orla,TO-ORL,08:21:00
+L51,02,2870,null,o,02,Orla,TO-ORL,09:01:00
+L51,02,2870,null,o,1,Orla,TO-ORL,10:01:00
+L51,02,2870,null,o,1,Orla,TO-ORL,11:01:00
+L51,02,2870,null,o,1,Orla,TO-ORL,12:01:00
+L51,02,2870,null,o,1,Orla,TO-ORL,13:21:00
+L51,02,2870,null,o,02,Orla,TO-ORL,14:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,15:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,15:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,16:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,16:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,17:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,17:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,18:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,18:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,19:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,19:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,20:01:00
+L51,02,2870,null,o,02,Orla,TO-ORL,20:41:00
+L51,02,2870,null,o,1,Orla,TO-ORL,21:21:00
+L51,02,2870,null,o,1,Orla,TO-ORL,22:41:00
+L51,02,2862,null,o,02,Orla,TO-ORL,04:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,05:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,05:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,06:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,06:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,06:55:00
+L51,02,2862,null,o,02,Orla,TO-ORL,07:35:00
+L51,02,2862,null,o,1,Orla,TO-ORL,08:20:00
+L51,02,2862,null,o,02,Orla,TO-ORL,09:00:00
+L51,02,2862,null,o,1,Orla,TO-ORL,10:00:00
+L51,02,2862,null,o,1,Orla,TO-ORL,11:00:00
+L51,02,2862,null,o,1,Orla,TO-ORL,12:00:00
+L51,02,2862,null,o,1,Orla,TO-ORL,13:20:00
+L51,02,2862,null,o,02,Orla,TO-ORL,14:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,15:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,15:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,16:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,16:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,17:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,17:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,18:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,18:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,19:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,19:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,20:00:00
+L51,02,2862,null,o,02,Orla,TO-ORL,20:40:00
+L51,02,2862,null,o,1,Orla,TO-ORL,21:20:00
+L51,02,2862,null,o,1,Orla,TO-ORL,22:40:00
+L51,02,2869,null,o,02,Orla,TO-ORL,04:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,05:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,05:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,06:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,06:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,06:59:00
+L51,02,2869,null,o,02,Orla,TO-ORL,07:39:00
+L51,02,2869,null,o,1,Orla,TO-ORL,08:24:00
+L51,02,2869,null,o,02,Orla,TO-ORL,09:04:00
+L51,02,2869,null,o,1,Orla,TO-ORL,10:04:00
+L51,02,2869,null,o,1,Orla,TO-ORL,11:04:00
+L51,02,2869,null,o,1,Orla,TO-ORL,12:04:00
+L51,02,2869,null,o,1,Orla,TO-ORL,13:24:00
+L51,02,2869,null,o,02,Orla,TO-ORL,14:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,15:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,15:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,16:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,16:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,17:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,17:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,18:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,18:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,19:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,19:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,20:04:00
+L51,02,2869,null,o,02,Orla,TO-ORL,20:44:00
+L51,02,2869,null,o,1,Orla,TO-ORL,21:24:00
+L51,02,2869,null,o,1,Orla,TO-ORL,22:44:00
+L51,02,2360,null,o,02,Orla,TO-ORL,04:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,05:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,05:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,06:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,06:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,06:58:00
+L51,02,2360,null,o,02,Orla,TO-ORL,07:38:00
+L51,02,2360,null,o,1,Orla,TO-ORL,08:23:00
+L51,02,2360,null,o,02,Orla,TO-ORL,09:03:00
+L51,02,2360,null,o,1,Orla,TO-ORL,10:03:00
+L51,02,2360,null,o,1,Orla,TO-ORL,11:03:00
+L51,02,2360,null,o,1,Orla,TO-ORL,12:03:00
+L51,02,2360,null,o,1,Orla,TO-ORL,13:23:00
+L51,02,2360,null,o,02,Orla,TO-ORL,14:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,15:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,15:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,16:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,16:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,17:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,17:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,18:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,18:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,19:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,19:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,20:03:00
+L51,02,2360,null,o,02,Orla,TO-ORL,20:43:00
+L51,02,2360,null,o,1,Orla,TO-ORL,21:23:00
+L51,02,2360,null,o,1,Orla,TO-ORL,22:43:00
+L51,52,2242,null,o,02,Orla,TO-ORL,04:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,05:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,05:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,06:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,06:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,07:03:00
+L51,52,2242,null,o,02,Orla,TO-ORL,07:44:00
+L51,52,2242,null,o,1,Orla,TO-ORL,08:29:00
+L51,52,2242,null,o,02,Orla,TO-ORL,09:08:00
+L51,52,2242,null,o,1,Orla,TO-ORL,10:08:00
+L51,52,2242,null,o,1,Orla,TO-ORL,11:08:00
+L51,52,2242,null,o,1,Orla,TO-ORL,12:08:00
+L51,52,2242,null,o,1,Orla,TO-ORL,13:28:00
+L51,52,2242,null,o,02,Orla,TO-ORL,14:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,15:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,15:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,16:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,16:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,17:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,17:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,18:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,18:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,19:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,19:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,20:08:00
+L51,52,2242,null,o,02,Orla,TO-ORL,20:48:00
+L51,52,2242,null,o,1,Orla,TO-ORL,21:28:00
+L51,52,2242,null,o,1,Orla,TO-ORL,22:48:00
+L51,03,2869,null,o,02,Orla,TO-ORL,04:25:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,05:02:00
+L51,03,2869,null,o,1,Orla,TO-ORL,05:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,05:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,05:37:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,06:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,06:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,06:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,06:37:00
+L51,03,2869,null,o,1,Orla,TO-ORL,07:00:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,07:07:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,07:37:00
+L51,03,2869,null,o,02,Orla,TO-ORL,07:41:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,08:07:00
+L51,03,2869,null,o,1,Orla,TO-ORL,08:26:00
+L51,03,2869,null,o,02,Orla,TO-ORL,09:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,09:07:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,09:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,10:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,10:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,11:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,11:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,12:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,12:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,13:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,14:04:00
+L51,03,2869,null,o,02,Orla,TO-ORL,14:25:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,15:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,15:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,15:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,15:39:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,16:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,16:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,16:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,16:39:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,17:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,17:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,17:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,17:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,18:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,18:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,18:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,18:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,19:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,19:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,19:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,19:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,20:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,20:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,20:34:00
+L51,03,2869,null,o,02,Orla,TO-ORL,20:45:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,21:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,21:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,22:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,22:45:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,23:09:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,05:10:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,05:45:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,06:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,06:45:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,07:15:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,07:45:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,08:15:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,09:15:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,09:50:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,10:50:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,11:50:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,12:50:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,14:12:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,15:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,15:47:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,16:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,16:47:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,17:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,17:42:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,18:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,18:42:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,19:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,19:42:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,20:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,20:42:00
+L51,01,2864,null,w,02,Warsztatowa,TO-OWR,21:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,22:12:00
+L51,01,2864,null,w,1,Warsztatowa,TO-OWR,23:17:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,05:08:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,05:43:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,06:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,06:43:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,07:13:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,07:43:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,08:13:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,09:13:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,09:48:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,10:48:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,11:48:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,12:48:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,14:10:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,15:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,15:45:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,16:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,16:45:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,17:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,17:40:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,18:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,18:40:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,19:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,19:40:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,20:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,20:40:00
+L51,01,2863,null,w,02,Warsztatowa,TO-OWR,21:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,22:10:00
+L51,01,2863,null,w,1,Warsztatowa,TO-OWR,23:15:00
+L51,02,2868,null,o,02,Orla,TO-ORL,04:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,04:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,05:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,05:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,06:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,06:50:00
+L51,02,2868,null,o,02,Orla,TO-ORL,07:30:00
+L51,02,2868,null,o,1,Orla,TO-ORL,08:15:00
+L51,02,2868,null,o,02,Orla,TO-ORL,08:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,09:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,10:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,11:55:00
+L51,02,2868,null,o,1,Orla,TO-ORL,13:15:00
+L51,02,2868,null,o,02,Orla,TO-ORL,14:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,14:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,15:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,15:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,16:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,16:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,17:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,17:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,18:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,18:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,19:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,19:55:00
+L51,02,2868,null,o,02,Orla,TO-ORL,20:35:00
+L51,02,2868,null,o,1,Orla,TO-ORL,21:15:00
+L51,02,2868,null,o,1,Orla,TO-ORL,22:35:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,05:11:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,05:46:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,06:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,06:46:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,07:16:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,07:46:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,08:16:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,09:16:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,09:51:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,10:51:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,11:51:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,12:51:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,14:13:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,15:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,15:48:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,16:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,16:48:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,17:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,17:43:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,18:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,18:43:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,19:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,19:43:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,20:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,20:43:00
+L51,01,2865,null,w,02,Warsztatowa,TO-OWR,21:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,22:13:00
+L51,01,2865,null,w,1,Warsztatowa,TO-OWR,23:18:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,04:53:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,05:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,05:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,06:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,06:58:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,07:28:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,07:58:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,08:58:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,09:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,10:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,11:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,12:33:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,13:55:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,14:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,15:30:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,15:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,16:30:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,16:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,17:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,17:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,18:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,18:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,19:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,19:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,20:25:00
+L51,02,2358,null,w,02,Warsztatowa,TO-OWR,20:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,21:55:00
+L51,02,2358,null,w,1,Warsztatowa,TO-OWR,23:00:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,04:57:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,05:32:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,05:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,06:32:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,07:02:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,07:32:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,08:02:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,09:02:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,09:37:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,10:37:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,11:37:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,12:37:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,13:59:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,14:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,15:34:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,15:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,16:34:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,16:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,17:29:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,17:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,18:29:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,18:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,19:29:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,19:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,20:29:00
+L51,03,2237,null,w,02,Warsztatowa,TO-OWR,20:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,21:59:00
+L51,03,2237,null,w,1,Warsztatowa,TO-OWR,23:04:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,04:55:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,05:30:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,05:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,06:30:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,07:00:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,07:30:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,08:00:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,09:00:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,09:35:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,10:35:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,11:35:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,12:35:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,13:57:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,14:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,15:32:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,15:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,16:32:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,16:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,17:27:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,17:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,18:27:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,18:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,19:27:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,19:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,20:27:00
+L51,01,2802,null,w,02,Warsztatowa,TO-OWR,20:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,21:57:00
+L51,01,2802,null,w,1,Warsztatowa,TO-OWR,23:02:00
+L51,03,2869,null,o,02,Orla,TO-ORL,04:25:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,05:02:00
+L51,03,2869,null,o,1,Orla,TO-ORL,05:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,05:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,05:37:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,06:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,06:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,06:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,06:37:00
+L51,03,2869,null,o,1,Orla,TO-ORL,07:00:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,07:07:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,07:37:00
+L51,03,2869,null,o,02,Orla,TO-ORL,07:41:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,08:07:00
+L51,03,2869,null,o,1,Orla,TO-ORL,08:26:00
+L51,03,2869,null,o,02,Orla,TO-ORL,09:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,09:07:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,09:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,10:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,10:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,11:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,11:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,12:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,12:42:00
+L51,03,2869,null,o,1,Orla,TO-ORL,13:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,14:04:00
+L51,03,2869,null,o,02,Orla,TO-ORL,14:25:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,15:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,15:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,15:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,15:39:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,16:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,16:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,16:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,16:39:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,17:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,17:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,17:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,17:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,18:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,18:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,18:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,18:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,19:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,19:05:00
+L51,03,2869,null,o,02,Orla,TO-ORL,19:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,19:34:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,20:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,20:05:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,20:34:00
+L51,03,2869,null,o,02,Orla,TO-ORL,20:45:00
+L51,03,2869,null,w,02,Warsztatowa,TO-OWR,21:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,21:25:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,22:04:00
+L51,03,2869,null,o,1,Orla,TO-ORL,22:45:00
+L51,03,2869,null,w,1,Warsztatowa,TO-OWR,23:09:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,04:59:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,05:34:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,06:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,06:34:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,07:04:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,07:34:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,08:04:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,09:04:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,09:39:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,10:39:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,11:39:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,12:39:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,14:01:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,15:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,15:36:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,16:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,16:36:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,17:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,17:31:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,18:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,18:31:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,19:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,19:31:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,20:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,20:31:00
+L51,51,2242,null,w,02,Warsztatowa,TO-OWR,21:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,22:01:00
+L51,51,2242,null,w,1,Warsztatowa,TO-OWR,23:06:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,05:04:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,05:39:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,06:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,06:39:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,07:09:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,07:39:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,08:09:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,09:09:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,09:44:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,10:44:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,11:44:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,12:44:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,14:06:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,15:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,15:41:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,16:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,16:41:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,17:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,17:36:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,18:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,18:36:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,19:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,19:36:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,20:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,20:36:00
+L51,01,2360,null,w,02,Warsztatowa,TO-OWR,21:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,22:06:00
+L51,01,2360,null,w,1,Warsztatowa,TO-OWR,23:11:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,05:03:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,05:38:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,06:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,06:38:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,07:08:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,07:38:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,08:08:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,09:08:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,09:43:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,10:43:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,11:43:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,12:43:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,14:05:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,15:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,15:40:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,16:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,16:40:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,17:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,17:35:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,18:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,18:35:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,19:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,19:35:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,20:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,20:35:00
+L51,01,2869,null,w,02,Warsztatowa,TO-OWR,21:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,22:05:00
+L51,01,2869,null,w,1,Warsztatowa,TO-OWR,23:10:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,05:07:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,05:42:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,06:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,06:42:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,07:12:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,07:42:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,08:12:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,09:12:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,09:47:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,10:47:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,11:47:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,12:47:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,14:09:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,15:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,15:44:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,16:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,16:44:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,17:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,17:39:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,18:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,18:39:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,19:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,19:39:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,20:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,20:39:00
+L51,01,2862,null,w,02,Warsztatowa,TO-OWR,21:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,22:09:00
+L51,01,2862,null,w,1,Warsztatowa,TO-OWR,23:14:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,05:06:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,05:41:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,06:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,06:41:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,07:11:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,07:41:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,08:11:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,09:11:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,09:46:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,10:46:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,11:46:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,12:46:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,14:08:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,15:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,15:43:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,16:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,16:43:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,17:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,17:38:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,18:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,18:38:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,19:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,19:38:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,20:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,20:38:00
+L51,01,2870,null,w,02,Warsztatowa,TO-OWR,21:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,22:08:00
+L51,01,2870,null,w,1,Warsztatowa,TO-OWR,23:13:00
+217,51,3354,null,m,5,Sarmacka,TP-BRA,04:50:00
+217,51,3354,null,m,1,Sarmacka,TP-BRA,05:10:00
+217,51,3354,null,m,2,Sarmacka,TP-BRA,05:23:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,05:38:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,05:53:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,06:09:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,06:21:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,06:31:00
+217,51,3354,null,null,07,Natolin Płn.,TP-NAT,06:41:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,06:51:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,07:01:00
+217,51,3354,null,null,06,Natolin Płn.,TP-NAT,07:11:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,07:21:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,07:31:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,07:41:00
+217,51,3354,null,null,07,Natolin Płn.,TP-NAT,07:51:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,08:01:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,08:11:00
+217,51,3354,null,null,06,Natolin Płn.,TP-NAT,08:22:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,08:34:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,08:49:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,09:04:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,09:19:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,09:34:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,09:49:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,10:04:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,10:19:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,10:34:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,10:49:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,11:04:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,11:19:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,11:34:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,11:49:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,12:04:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,12:19:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,12:34:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,12:49:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,13:04:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,13:19:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,13:34:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,13:49:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,14:04:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,14:19:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,14:31:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,14:41:00
+217,51,3354,null,null,06,Natolin Płn.,TP-NAT,14:51:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,15:01:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,15:13:00
+217,51,3354,null,null,07,Natolin Płn.,TP-NAT,15:23:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,15:33:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,15:43:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,15:53:00
+217,51,3354,null,null,06,Natolin Płn.,TP-NAT,16:03:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,16:14:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,16:24:00
+217,51,3354,null,null,07,Natolin Płn.,TP-NAT,16:34:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,16:44:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,16:54:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,17:04:00
+217,51,3354,null,null,06,Natolin Płn.,TP-NAT,17:14:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,17:24:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,17:34:00
+217,51,3354,null,null,07,Natolin Płn.,TP-NAT,17:44:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,17:54:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,18:04:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,18:18:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,18:33:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,18:48:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,19:03:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,19:16:00
+217,51,3354,null,null,2,Natolin Płn.,TP-NAT,19:31:00
+217,51,3354,null,null,3,Natolin Płn.,TP-NAT,19:46:00
+217,51,3354,null,null,4,Natolin Płn.,TP-NAT,20:01:00
+217,51,3354,null,null,5,Natolin Płn.,TP-NAT,20:16:00
+217,51,3354,null,null,1,Natolin Płn.,TP-NAT,20:31:00
+217,51,3354,null,w,2,Metro Imielin,TX-MIM,20:46:00
+217,51,3354,null,w,3,Metro Imielin,TX-MIM,21:01:00
+217,51,3354,null,m,4,Sarmacka,TP-BRA,21:15:00
+217,51,3354,null,m,5,Sarmacka,TP-BRA,21:30:00
+217,51,3354,null,m,1,Sarmacka,TP-BRA,21:50:00
+217,51,3354,null,m,5,Sarmacka,TP-BRA,22:10:00
+217,51,3354,null,m,1,Sarmacka,TP-BRA,22:30:00
+217,51,3354,null,m,5,Sarmacka,TP-BRA,22:50:00
+217,51,3354,null,m,1,Sarmacka,TP-BRA,23:10:00
+217,51,3354,null,m,5,Sarmacka,TP-BRA,23:30:00
+217,51,3354,null,m,1,Sarmacka,TP-BRA,24:00:00
+217,01,3353,null,m,5,Sarmacka,TP-BRA,04:49:00
+217,01,3353,null,m,1,Sarmacka,TP-BRA,05:09:00
+217,01,3353,null,m,2,Sarmacka,TP-BRA,05:22:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,05:37:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,05:52:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,06:08:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,06:20:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,06:30:00
+217,01,3353,null,null,07,Natolin Płn.,TP-NAT,06:40:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,06:50:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,07:00:00
+217,01,3353,null,null,06,Natolin Płn.,TP-NAT,07:10:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,07:20:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,07:30:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,07:40:00
+217,01,3353,null,null,07,Natolin Płn.,TP-NAT,07:50:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,08:00:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,08:10:00
+217,01,3353,null,null,06,Natolin Płn.,TP-NAT,08:21:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,08:33:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,08:48:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,09:03:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,09:18:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,09:33:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,09:48:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,10:03:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,10:18:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,10:33:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,10:48:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,11:03:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,11:18:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,11:33:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,11:48:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,12:03:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,12:18:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,12:33:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,12:48:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,13:03:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,13:18:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,13:33:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,13:48:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,14:03:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,14:18:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,14:30:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,14:40:00
+217,01,3353,null,null,06,Natolin Płn.,TP-NAT,14:50:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,15:00:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,15:12:00
+217,01,3353,null,null,07,Natolin Płn.,TP-NAT,15:22:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,15:32:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,15:42:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,15:52:00
+217,01,3353,null,null,06,Natolin Płn.,TP-NAT,16:02:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,16:13:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,16:23:00
+217,01,3353,null,null,07,Natolin Płn.,TP-NAT,16:33:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,16:43:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,16:53:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,17:03:00
+217,01,3353,null,null,06,Natolin Płn.,TP-NAT,17:13:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,17:23:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,17:33:00
+217,01,3353,null,null,07,Natolin Płn.,TP-NAT,17:43:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,17:53:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,18:03:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,18:17:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,18:32:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,18:47:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,19:02:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,19:15:00
+217,01,3353,null,null,2,Natolin Płn.,TP-NAT,19:30:00
+217,01,3353,null,null,3,Natolin Płn.,TP-NAT,19:45:00
+217,01,3353,null,null,4,Natolin Płn.,TP-NAT,20:00:00
+217,01,3353,null,null,5,Natolin Płn.,TP-NAT,20:15:00
+217,01,3353,null,null,1,Natolin Płn.,TP-NAT,20:30:00
+217,01,3353,null,w,2,Metro Imielin,TX-MIM,20:45:00
+217,01,3353,null,w,3,Metro Imielin,TX-MIM,21:00:00
+217,01,3353,null,m,4,Sarmacka,TP-BRA,21:14:00
+217,01,3353,null,m,5,Sarmacka,TP-BRA,21:29:00
+217,01,3353,null,m,1,Sarmacka,TP-BRA,21:49:00
+217,01,3353,null,m,5,Sarmacka,TP-BRA,22:09:00
+217,01,3353,null,m,1,Sarmacka,TP-BRA,22:29:00
+217,01,3353,null,m,5,Sarmacka,TP-BRA,22:49:00
+217,01,3353,null,m,1,Sarmacka,TP-BRA,23:09:00
+217,01,3353,null,m,5,Sarmacka,TP-BRA,23:29:00
+217,01,3353,null,m,1,Sarmacka,TP-BRA,23:59:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,05:40:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,05:55:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,06:11:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,06:23:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,06:33:00
+217,02,3468,null,null,07,Natolin Płn.,TP-NAT,06:43:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,06:53:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,07:03:00
+217,02,3468,null,null,06,Natolin Płn.,TP-NAT,07:13:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,07:23:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,07:33:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,07:43:00
+217,02,3468,null,null,07,Natolin Płn.,TP-NAT,07:53:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,08:03:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,08:13:00
+217,02,3468,null,null,06,Natolin Płn.,TP-NAT,08:24:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,08:36:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,08:51:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,09:06:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,09:21:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,09:36:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,09:51:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,10:06:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,10:21:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,10:36:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,10:51:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,11:06:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,11:21:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,11:36:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,11:51:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,12:06:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,12:21:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,12:36:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,12:51:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,13:06:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,13:21:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,13:36:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,13:51:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,14:06:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,14:21:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,14:33:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,14:43:00
+217,02,3468,null,null,06,Natolin Płn.,TP-NAT,14:53:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,15:03:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,15:15:00
+217,02,3468,null,null,07,Natolin Płn.,TP-NAT,15:25:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,15:35:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,15:45:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,15:55:00
+217,02,3468,null,null,06,Natolin Płn.,TP-NAT,16:05:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,16:16:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,16:26:00
+217,02,3468,null,null,07,Natolin Płn.,TP-NAT,16:36:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,16:46:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,16:56:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,17:06:00
+217,02,3468,null,null,06,Natolin Płn.,TP-NAT,17:16:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,17:26:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,17:36:00
+217,02,3468,null,null,07,Natolin Płn.,TP-NAT,17:46:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,17:56:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,18:06:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,18:20:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,18:35:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,18:50:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,19:05:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,19:18:00
+217,02,3468,null,null,2,Natolin Płn.,TP-NAT,19:33:00
+217,02,3468,null,null,3,Natolin Płn.,TP-NAT,19:48:00
+217,02,3468,null,null,4,Natolin Płn.,TP-NAT,20:03:00
+217,02,3468,null,null,5,Natolin Płn.,TP-NAT,20:18:00
+217,02,3468,null,null,1,Natolin Płn.,TP-NAT,20:33:00
+217,02,3468,null,w,2,Metro Imielin,TX-MIM,20:48:00
+217,02,3468,null,w,3,Metro Imielin,TX-MIM,21:03:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,05:39:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,05:54:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,06:10:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,06:22:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,06:32:00
+217,04,3385,null,null,07,Natolin Płn.,TP-NAT,06:42:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,06:52:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,07:02:00
+217,04,3385,null,null,06,Natolin Płn.,TP-NAT,07:12:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,07:22:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,07:32:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,07:42:00
+217,04,3385,null,null,07,Natolin Płn.,TP-NAT,07:52:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,08:02:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,08:12:00
+217,04,3385,null,null,06,Natolin Płn.,TP-NAT,08:23:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,08:35:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,08:50:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,09:05:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,09:20:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,09:35:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,09:50:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,10:05:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,10:20:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,10:35:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,10:50:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,11:05:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,11:20:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,11:35:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,11:50:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,12:05:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,12:20:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,12:35:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,12:50:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,13:05:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,13:20:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,13:35:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,13:50:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,14:05:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,14:20:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,14:32:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,14:42:00
+217,04,3385,null,null,06,Natolin Płn.,TP-NAT,14:52:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,15:02:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,15:14:00
+217,04,3385,null,null,07,Natolin Płn.,TP-NAT,15:24:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,15:34:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,15:44:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,15:54:00
+217,04,3385,null,null,06,Natolin Płn.,TP-NAT,16:04:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,16:15:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,16:25:00
+217,04,3385,null,null,07,Natolin Płn.,TP-NAT,16:35:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,16:45:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,16:55:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,17:05:00
+217,04,3385,null,null,06,Natolin Płn.,TP-NAT,17:15:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,17:25:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,17:35:00
+217,04,3385,null,null,07,Natolin Płn.,TP-NAT,17:45:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,17:55:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,18:05:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,18:19:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,18:34:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,18:49:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,19:04:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,19:17:00
+217,04,3385,null,null,2,Natolin Płn.,TP-NAT,19:32:00
+217,04,3385,null,null,3,Natolin Płn.,TP-NAT,19:47:00
+217,04,3385,null,null,4,Natolin Płn.,TP-NAT,20:02:00
+217,04,3385,null,null,5,Natolin Płn.,TP-NAT,20:17:00
+217,04,3385,null,null,1,Natolin Płn.,TP-NAT,20:32:00
+217,04,3385,null,w,2,Metro Imielin,TX-MIM,20:47:00
+217,04,3385,null,w,3,Metro Imielin,TX-MIM,21:02:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,05:43:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,05:58:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,06:14:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,06:26:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,06:36:00
+217,04,3143,null,null,07,Natolin Płn.,TP-NAT,06:46:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,06:56:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,07:07:00
+217,04,3143,null,null,06,Natolin Płn.,TP-NAT,07:17:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,07:27:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,07:37:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,07:47:00
+217,04,3143,null,null,07,Natolin Płn.,TP-NAT,07:57:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,08:07:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,08:17:00
+217,04,3143,null,null,06,Natolin Płn.,TP-NAT,08:28:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,08:40:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,08:55:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,09:09:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,09:24:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,09:39:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,09:54:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,10:09:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,10:24:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,10:39:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,10:54:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,11:09:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,11:24:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,11:39:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,11:54:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,12:09:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,12:24:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,12:39:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,12:54:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,13:09:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,13:24:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,13:39:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,13:54:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,14:09:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,14:24:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,14:36:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,14:46:00
+217,04,3143,null,null,06,Natolin Płn.,TP-NAT,14:56:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,15:07:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,15:19:00
+217,04,3143,null,null,07,Natolin Płn.,TP-NAT,15:29:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,15:39:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,15:49:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,15:59:00
+217,04,3143,null,null,06,Natolin Płn.,TP-NAT,16:09:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,16:20:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,16:30:00
+217,04,3143,null,null,07,Natolin Płn.,TP-NAT,16:40:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,16:50:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,17:00:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,17:10:00
+217,04,3143,null,null,06,Natolin Płn.,TP-NAT,17:20:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,17:30:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,17:40:00
+217,04,3143,null,null,07,Natolin Płn.,TP-NAT,17:50:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,18:00:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,18:10:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,18:24:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,18:39:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,18:54:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,19:08:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,19:21:00
+217,04,3143,null,null,2,Natolin Płn.,TP-NAT,19:36:00
+217,04,3143,null,null,3,Natolin Płn.,TP-NAT,19:51:00
+217,04,3143,null,null,4,Natolin Płn.,TP-NAT,20:06:00
+217,04,3143,null,null,5,Natolin Płn.,TP-NAT,20:21:00
+217,04,3143,null,null,1,Natolin Płn.,TP-NAT,20:36:00
+217,04,3143,null,w,2,Metro Imielin,TX-MIM,20:51:00
+217,04,3143,null,w,3,Metro Imielin,TX-MIM,21:06:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,05:42:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,05:57:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,06:13:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,06:25:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,06:35:00
+217,04,3208,null,null,07,Natolin Płn.,TP-NAT,06:45:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,06:55:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,07:06:00
+217,04,3208,null,null,06,Natolin Płn.,TP-NAT,07:16:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,07:26:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,07:36:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,07:46:00
+217,04,3208,null,null,07,Natolin Płn.,TP-NAT,07:56:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,08:06:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,08:16:00
+217,04,3208,null,null,06,Natolin Płn.,TP-NAT,08:27:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,08:39:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,08:54:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,09:08:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,09:23:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,09:38:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,09:53:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,10:08:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,10:23:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,10:38:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,10:53:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,11:08:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,11:23:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,11:38:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,11:53:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,12:08:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,12:23:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,12:38:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,12:53:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,13:08:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,13:23:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,13:38:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,13:53:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,14:08:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,14:23:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,14:35:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,14:45:00
+217,04,3208,null,null,06,Natolin Płn.,TP-NAT,14:55:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,15:06:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,15:18:00
+217,04,3208,null,null,07,Natolin Płn.,TP-NAT,15:28:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,15:38:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,15:48:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,15:58:00
+217,04,3208,null,null,06,Natolin Płn.,TP-NAT,16:08:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,16:19:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,16:29:00
+217,04,3208,null,null,07,Natolin Płn.,TP-NAT,16:39:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,16:49:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,16:59:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,17:09:00
+217,04,3208,null,null,06,Natolin Płn.,TP-NAT,17:19:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,17:29:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,17:39:00
+217,04,3208,null,null,07,Natolin Płn.,TP-NAT,17:49:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,17:59:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,18:09:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,18:23:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,18:38:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,18:53:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,19:07:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,19:20:00
+217,04,3208,null,null,2,Natolin Płn.,TP-NAT,19:35:00
+217,04,3208,null,null,3,Natolin Płn.,TP-NAT,19:50:00
+217,04,3208,null,null,4,Natolin Płn.,TP-NAT,20:05:00
+217,04,3208,null,null,5,Natolin Płn.,TP-NAT,20:20:00
+217,04,3208,null,null,1,Natolin Płn.,TP-NAT,20:35:00
+217,04,3208,null,w,2,Metro Imielin,TX-MIM,20:50:00
+217,04,3208,null,w,3,Metro Imielin,TX-MIM,21:05:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,05:45:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,06:00:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,06:16:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,06:28:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,06:38:00
+217,04,3138,null,null,07,Natolin Płn.,TP-NAT,06:48:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,06:58:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,07:10:00
+217,04,3138,null,null,06,Natolin Płn.,TP-NAT,07:20:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,07:30:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,07:40:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,07:50:00
+217,04,3138,null,null,07,Natolin Płn.,TP-NAT,08:00:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,08:10:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,08:20:00
+217,04,3138,null,null,06,Natolin Płn.,TP-NAT,08:31:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,08:43:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,08:58:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,09:11:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,09:26:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,09:41:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,09:56:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,10:11:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,10:26:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,10:41:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,10:56:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,11:11:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,11:26:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,11:41:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,11:56:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,12:11:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,12:26:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,12:41:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,12:56:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,13:11:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,13:26:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,13:41:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,13:56:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,14:11:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,14:26:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,14:38:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,14:48:00
+217,04,3138,null,null,06,Natolin Płn.,TP-NAT,14:58:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,15:10:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,15:22:00
+217,04,3138,null,null,07,Natolin Płn.,TP-NAT,15:32:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,15:42:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,15:52:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,16:02:00
+217,04,3138,null,null,06,Natolin Płn.,TP-NAT,16:12:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,16:23:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,16:33:00
+217,04,3138,null,null,07,Natolin Płn.,TP-NAT,16:43:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,16:53:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,17:03:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,17:13:00
+217,04,3138,null,null,06,Natolin Płn.,TP-NAT,17:23:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,17:33:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,17:43:00
+217,04,3138,null,null,07,Natolin Płn.,TP-NAT,17:53:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,18:03:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,18:13:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,18:27:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,18:42:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,18:57:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,19:10:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,19:23:00
+217,04,3138,null,null,2,Natolin Płn.,TP-NAT,19:38:00
+217,04,3138,null,null,3,Natolin Płn.,TP-NAT,19:53:00
+217,04,3138,null,null,4,Natolin Płn.,TP-NAT,20:08:00
+217,04,3138,null,null,5,Natolin Płn.,TP-NAT,20:23:00
+217,04,3138,null,null,1,Natolin Płn.,TP-NAT,20:38:00
+217,04,3138,null,w,2,Metro Imielin,TX-MIM,20:53:00
+217,04,3138,null,w,3,Metro Imielin,TX-MIM,21:08:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,05:44:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,05:59:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,06:15:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,06:27:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,06:37:00
+217,02,3144,null,null,07,Natolin Płn.,TP-NAT,06:47:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,06:57:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,07:08:00
+217,02,3144,null,null,06,Natolin Płn.,TP-NAT,07:18:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,07:28:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,07:38:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,07:48:00
+217,02,3144,null,null,07,Natolin Płn.,TP-NAT,07:58:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,08:08:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,08:18:00
+217,02,3144,null,null,06,Natolin Płn.,TP-NAT,08:29:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,08:41:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,08:56:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,09:10:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,09:25:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,09:40:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,09:55:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,10:10:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,10:25:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,10:40:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,10:55:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,11:10:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,11:25:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,11:40:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,11:55:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,12:10:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,12:25:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,12:40:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,12:55:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,13:10:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,13:25:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,13:40:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,13:55:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,14:10:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,14:25:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,14:37:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,14:47:00
+217,02,3144,null,null,06,Natolin Płn.,TP-NAT,14:57:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,15:08:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,15:20:00
+217,02,3144,null,null,07,Natolin Płn.,TP-NAT,15:30:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,15:40:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,15:50:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,16:00:00
+217,02,3144,null,null,06,Natolin Płn.,TP-NAT,16:10:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,16:21:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,16:31:00
+217,02,3144,null,null,07,Natolin Płn.,TP-NAT,16:41:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,16:51:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,17:01:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,17:11:00
+217,02,3144,null,null,06,Natolin Płn.,TP-NAT,17:21:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,17:31:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,17:41:00
+217,02,3144,null,null,07,Natolin Płn.,TP-NAT,17:51:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,18:01:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,18:11:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,18:25:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,18:40:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,18:55:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,19:09:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,19:22:00
+217,02,3144,null,null,2,Natolin Płn.,TP-NAT,19:37:00
+217,02,3144,null,null,3,Natolin Płn.,TP-NAT,19:52:00
+217,02,3144,null,null,4,Natolin Płn.,TP-NAT,20:07:00
+217,02,3144,null,null,5,Natolin Płn.,TP-NAT,20:22:00
+217,02,3144,null,null,1,Natolin Płn.,TP-NAT,20:37:00
+217,02,3144,null,w,2,Metro Imielin,TX-MIM,20:52:00
+217,02,3144,null,w,3,Metro Imielin,TX-MIM,21:07:00
+217,15,3009,null,m,5,Sarmacka,TP-BRA,04:38:00
+217,15,3009,null,m,1,Sarmacka,TP-BRA,04:58:00
+217,15,3009,null,m,2,Sarmacka,TP-BRA,05:11:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,05:26:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,05:41:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,05:56:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,06:08:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,06:18:00
+217,15,3009,null,null,07,Natolin Płn.,TP-NAT,06:28:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,06:38:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,06:48:00
+217,15,3009,null,null,06,Natolin Płn.,TP-NAT,06:58:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,07:08:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,07:18:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,07:28:00
+217,15,3009,null,null,07,Natolin Płn.,TP-NAT,07:38:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,07:48:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,07:58:00
+217,15,3009,null,null,06,Natolin Płn.,TP-NAT,08:09:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,08:21:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,08:36:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,08:51:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,09:06:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,09:21:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,09:36:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,09:51:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,10:06:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,10:21:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,10:36:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,10:51:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,11:06:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,11:21:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,11:36:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,11:51:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,12:06:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,12:21:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,12:36:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,12:51:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,13:06:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,13:21:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,13:36:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,13:51:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,14:06:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,14:18:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,14:28:00
+217,15,3009,null,null,06,Natolin Płn.,TP-NAT,14:38:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,14:48:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,14:58:00
+217,15,3009,null,null,07,Natolin Płn.,TP-NAT,15:08:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,15:18:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,15:28:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,15:38:00
+217,15,3009,null,null,06,Natolin Płn.,TP-NAT,15:48:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,15:58:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,16:08:00
+217,15,3009,null,null,07,Natolin Płn.,TP-NAT,16:18:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,16:28:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,16:38:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,16:48:00
+217,15,3009,null,null,06,Natolin Płn.,TP-NAT,16:58:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,17:08:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,17:18:00
+217,15,3009,null,null,07,Natolin Płn.,TP-NAT,17:28:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,17:38:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,17:48:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,18:03:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,18:18:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,18:33:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,18:48:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,19:03:00
+217,15,3009,null,null,2,Natolin Płn.,TP-NAT,19:18:00
+217,15,3009,null,null,3,Natolin Płn.,TP-NAT,19:33:00
+217,15,3009,null,null,4,Natolin Płn.,TP-NAT,19:48:00
+217,15,3009,null,null,5,Natolin Płn.,TP-NAT,20:03:00
+217,15,3009,null,null,1,Natolin Płn.,TP-NAT,20:18:00
+217,15,3009,null,w,2,Metro Imielin,TX-MIM,20:33:00
+217,15,3009,null,w,3,Metro Imielin,TX-MIM,20:48:00
+217,15,3009,null,m,4,Sarmacka,TP-BRA,21:03:00
+217,15,3009,null,m,5,Sarmacka,TP-BRA,21:18:00
+217,15,3009,null,m,1,Sarmacka,TP-BRA,21:38:00
+217,15,3009,null,m,5,Sarmacka,TP-BRA,21:58:00
+217,15,3009,null,m,1,Sarmacka,TP-BRA,22:18:00
+217,15,3009,null,m,5,Sarmacka,TP-BRA,22:38:00
+217,15,3009,null,m,1,Sarmacka,TP-BRA,22:58:00
+217,15,3009,null,m,5,Sarmacka,TP-BRA,23:18:00
+217,15,3009,null,m,1,Sarmacka,TP-BRA,23:48:00

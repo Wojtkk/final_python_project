@@ -1,27 +1,15 @@
 import pandas as pd 
 
-from reading_data import give_modified_dataframes_from_dir
+STOPS_ON_ROUTES_FILENAME = 'stops_of_buses.csv'
+BUS_STOPS_FILENAME = 'bus_stops.csv'
+CURR_POSITIONS_OF_BUSES_FILENAME = 'curr_position_of_buses.csv'
+TIME_TABLES_FILENAME = 'time_tables.csv'
+
 from positions import calculate_speed_in_km_per_h
 from positions import calculate_middle_point
 
-from reading_data import STOP_ID_STR
-from reading_data import STREET_ID_STR
-
-from reading_data import LINE_STR
-from reading_data import DIRECTION_STR
-from reading_data import ROUTE_STR
-
-from reading_data import VEHICLE_NUMBER_STR
-from reading_data import TIME_STR
-
-from reading_data import DISTANCE_STR
-from reading_data import LON_STR
-from reading_data import LAT_STR
-
-from Data_collecting.data_convert import STOPS_ON_ROUTES_FILENAME
-from Data_collecting.data_convert import BUS_STOPS_FILENAME
-from Data_collecting.data_convert import CURR_POSITIONS_OF_BUSES_FILENAME
-from Data_collecting.data_convert import TIME_TABLES_FILENAME
+from Data_reading.modifying_dfs import *
+from Data_reading.reading_data import give_modified_dataframes_from_dir
 
 SPEED_STR = 'speed'
 SPEED_LIMIT = 50
