@@ -1,6 +1,7 @@
 import geopy.distance
 from datetime import datetime
 
+
 SECONDS_IN_HOUR = 3600
 
 def calculate_time_in_sec_between_to_dates_with_hours(time_start, time_end, date_format="%Y-%m-%d %H:%M:%S"):

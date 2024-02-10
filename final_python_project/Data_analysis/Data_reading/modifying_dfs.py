@@ -1,7 +1,7 @@
 import pandas as pd
 
-LON_STR = 'Lon'
-LAT_STR = 'Lat'
+LON_STR = 'lon'
+LAT_STR = 'lat'
 
 BUS_STOP_NUM_STR = 'bus_stop_num'
 BUS_STOP_GROUP_NUM_STR = 'bus_stop_group'
@@ -19,12 +19,22 @@ DISTANCE_STR = 'distance'
 LON_STR = 'lon'
 LAT_STR = 'lat'
 
+MAX_NUM_OF_BUS_STOP = 1000
+
 def modify_dataframe(df, columns_to_drop, columns_renames_dict):
     def drop_given_columns(df, columns_to_drop):
         df.drop(columns = columns_to_drop, axis = 1, inplace = True)
         
     def rename_given_columns(df, columns_renames_dict):
         df.rename(columns = columns_renames_dict, inplace = True)
+    
+    def remove_bus_depots_data(df):
+        def bus_stop_is_bus_depot(bus_stop_group_num):
+            return isinstance(bus_stop_group_num, str) and bus_stop_group_num[0] == 'R'
+                
+        if BUS_STOP_GROUP_NUM_STR in df.columns:
+            depot_indices = df[df[BUS_STOP_GROUP_NUM_STR].apply(bus_stop_is_bus_depot)].index
+            df = df.drop(depot_indices, inplace = True)
     
     def convert_time_format_if_possible(df):
         if TIME_STR in df.columns:
@@ -42,33 +52,17 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
             df[TIME_STR] = pd.to_datetime(df[TIME_STR])
     
     def add_bus_stop_id_column_if_possible(df):
-        def mapping_on_bus_stops_id(df):
-            keys = set()
-            
-            for i, row in df.iterrows():
-                num_of_group = row[BUS_STOP_GROUP_NUM_STR]
-                num_of_bus_stop = row[BUS_STOP_NUM_STR]
-                
-                key = (num_of_group, num_of_bus_stop)
-                keys.add(key)
-                
-            mapping = {}
-            for i, x in enumerate(keys):
-                mapping[x] = i
-                
-            return mapping
+        def mapping_on_bus_stops_id(num_of_group, num_of_bus_stop):
+            return num_of_group * (MAX_NUM_OF_BUS_STOP + 1) + num_of_bus_stop
         
         cols = df.columns
         if BUS_STOP_GROUP_NUM_STR in cols and BUS_STOP_NUM_STR in cols:
-            mapping = mapping_on_bus_stops_id(df)
-            
             df[BUS_STOP_ID_STR] = ""
             for i, row in df.iterrows():
-                num_of_group = row[BUS_STOP_GROUP_NUM_STR]
-                num_of_bus_stop = row[BUS_STOP_NUM_STR]
+                num_of_group = int(row[BUS_STOP_GROUP_NUM_STR])
+                num_of_bus_stop = int(row[BUS_STOP_NUM_STR])
                 
-                key = (num_of_group, num_of_bus_stop)
-                bus_stop_id = mapping[key]
+                bus_stop_id = mapping_on_bus_stops_id(num_of_group, num_of_bus_stop)
                 
                 df.at[i, BUS_STOP_ID_STR] = bus_stop_id
                 
@@ -79,9 +73,12 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
     
     rename_given_columns(df, columns_renames_dict)
     
+    remove_bus_depots_data(df)
+    
     convert_time_format_if_possible(df)
     
     add_bus_stop_id_column_if_possible(df)
+
 
 def modify_stops_on_routes_df(df):
     # original columns:
@@ -92,8 +89,7 @@ def modify_stops_on_routes_df(df):
               'ulica_id' : STREET_ID_STR,
               'nr_przystanku' : BUS_STOP_ID_STR}  
        
-    modify_dataframe(df, to_drop, renames)    
-    
+    modify_dataframe(df, to_drop, renames)       
     
 def modify_bus_stops_df(df):
     # original columns:
@@ -128,7 +124,6 @@ def modify_time_tables_df(df):
     to_drop = {'symbol_2', 'symbol_1', 'brygada', 'trasa'}
     
     renames = {'kierunek' : DIRECTION_STR,
-               'trasa' : DIRECTION_STR,
                'czas' : TIME_STR,
                'nr_przystanku' : BUS_STOP_NUM_STR,
                'nr_zespolu': BUS_STOP_GROUP_NUM_STR}

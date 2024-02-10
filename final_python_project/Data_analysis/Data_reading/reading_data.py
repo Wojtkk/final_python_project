@@ -51,8 +51,6 @@ def give_modified_dataframes_from_dir():
         for name, function in mod_func:
             if (filename == name):
                 function(df)
-                print(df)
-                
                 new_dfs_and_filenames.append((name, df))
                 break 
             

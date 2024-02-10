@@ -77,7 +77,7 @@ def give_list_of_allowed_speed_coords(dataframe_with_speed_col):
     return dataframe_with_speed_col.query(allowed_speed)
 
 
-def give_lines_with_most_frequent_overspeed(dataframe, how_many, minimal_num_of_vehicles = 3):
+def give_lines_with_most_frequent_overspeed(dataframe, minimal_num_of_vehicles = 3):
     coords_df = give_dataframe_of_coords_with_line_and_speed(dataframe)
     
     coords_for_line_dataframes = divide_on_dataframes_by_line(coords_df)
@@ -97,19 +97,25 @@ def give_lines_with_most_frequent_overspeed(dataframe, how_many, minimal_num_of_
     result_for_each_line = sorted(result_for_each_line, key = lambda x: x[1])
     length = len(result_for_each_line)
     
-    return result_for_each_line[:max(length, how_many)]
+    return result_for_each_line
 
 if __name__ == '__main__':
     dataframes = give_modified_dataframes_from_dir()
 
     dataframes = dict(dataframes)
     positions_df = dataframes[CURR_POSITIONS_OF_BUSES_FILENAME]
+    
+    with_speed_df = give_dataframe_of_coords_with_line_and_speed(positions_df)
+    allowed = give_list_of_allowed_speed_coords(with_speed_df)
+    over = give_list_of_overspeed_coords(with_speed_df)
+    
+    from visualization import plot_points_on_map
+    
+    points_and_values = [(r[LAT_STR], r[LON_STR], 0) for index, r in allowed.iterrows()]
+    points_and_values += [(r[LAT_STR], r[LON_STR], 1) for index, r in over.iterrows()]
+    plot_points_on_map(points_and_values, 15, 12)
+    
 
-    fast_lines = give_lines_with_most_frequent_overspeed(positions_df, 6)
-    fast_lines = sorted(fast_lines, key = lambda x: x[1])
-
-    for elem in fast_lines:
-        print(elem)
 
         
     
