@@ -1,23 +1,32 @@
 import pandas as pd
+from enum import Enum
 
 LON_STR = 'lon'
 LAT_STR = 'lat'
 
-BUS_STOP_NUM_STR = 'bus_stop_num'
-BUS_STOP_GROUP_NUM_STR = 'bus_stop_group'
-BUS_STOP_ID_STR = 'bus_stop_id'
-STREET_ID_STR = 'street_id'
+class Aliases(Enum):
+    BUS_STOP_NUM = 'bus_stop_num'
+    BUS_STOP_GROUP_NUM = 'bus_stop_group'
+    BUS_STOP_ID = 'bus_stop_id'
+    STREET_ID = 'street_id'
+    PLACE = 'place'
 
-LINE_STR = 'line'
-DIRECTION_STR = 'direction'
-ROUTE_STR = 'route'
+    LINE = 'line'
+    DIRECTION = 'direction'
+    ROUTE = 'route'
 
-VEHICLE_NUMBER_STR = 'vehicle_num'
-TIME_STR = 'time'
+    VEHICLE_NUMBER = 'vehicle_num'
+    TIME = 'time'
 
-DISTANCE_STR = 'distance'
-LON_STR = 'lon'
-LAT_STR = 'lat'
+    DISTANCE = 'distance'
+    LON = 'lon'
+    LAT = 'lat'
+    
+    DELAY = 'delay'
+    EXPECTED_WAITING = 'expected_waiting'
+    
+    OVERSPEED_PERCENTAGE = 'overspeed_percentage'
+    SPEED = 'speed'
 
 MAX_NUM_OF_BUS_STOP = 1000
 
@@ -32,12 +41,12 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
         def bus_stop_is_bus_depot(bus_stop_group_num):
             return isinstance(bus_stop_group_num, str) and bus_stop_group_num[0] == 'R'
                 
-        if BUS_STOP_GROUP_NUM_STR in df.columns:
-            depot_indices = df[df[BUS_STOP_GROUP_NUM_STR].apply(bus_stop_is_bus_depot)].index
+        if Aliases.BUS_STOP_GROUP_NUM.value in df.columns:
+            depot_indices = df[df[Aliases.BUS_STOP_GROUP_NUM.value].apply(bus_stop_is_bus_depot)].index
             df = df.drop(depot_indices, inplace = True)
     
     def convert_time_format_if_possible(df):
-        if TIME_STR in df.columns:
+        if Aliases.TIME.value in df.columns:
             bad_midnight = '24:00:00'
             good_midnight = '23:59:59'
             
@@ -47,26 +56,27 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
                 return time
                     
             
-            df[TIME_STR] = df[TIME_STR].apply(modify_midnight)
+            df[Aliases.TIME.value] = df[Aliases.TIME.value].apply(modify_midnight)
             
-            df[TIME_STR] = pd.to_datetime(df[TIME_STR])
+            df[Aliases.TIME.value] = pd.to_datetime(df[Aliases.TIME.value])
     
     def add_bus_stop_id_column_if_possible(df):
         def mapping_on_bus_stops_id(num_of_group, num_of_bus_stop):
             return num_of_group * (MAX_NUM_OF_BUS_STOP + 1) + num_of_bus_stop
         
         cols = df.columns
-        if BUS_STOP_GROUP_NUM_STR in cols and BUS_STOP_NUM_STR in cols:
-            df[BUS_STOP_ID_STR] = ""
+        if Aliases.BUS_STOP_GROUP_NUM.value in cols and Aliases.BUS_STOP_GROUP_NUM.value in cols:
+            df[Aliases.BUS_STOP_ID.value] = ""
             for i, row in df.iterrows():
-                num_of_group = int(row[BUS_STOP_GROUP_NUM_STR])
-                num_of_bus_stop = int(row[BUS_STOP_NUM_STR])
+                num_of_group = int(row[Aliases.BUS_STOP_GROUP_NUM.value])
+                num_of_bus_stop = int(row[Aliases.BUS_STOP_NUM.value])
                 
                 bus_stop_id = mapping_on_bus_stops_id(num_of_group, num_of_bus_stop)
                 
-                df.at[i, BUS_STOP_ID_STR] = bus_stop_id
+                df.at[i, Aliases.BUS_STOP_ID.value] = bus_stop_id
                 
-            unnecessary_cols_now = {BUS_STOP_GROUP_NUM_STR, BUS_STOP_NUM_STR}
+            unnecessary_cols_now = {Aliases.BUS_STOP_GROUP_NUM.value, 
+                                    Aliases.BUS_STOP_NUM.value}
             drop_given_columns(df, unnecessary_cols_now)
 
     drop_given_columns(df, columns_to_drop)
@@ -83,25 +93,27 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
 def modify_stops_on_routes_df(df):
     # original columns:
     # odleglosc, ulica_id, nr_zespolu, typ, nr_przystanku, line 
-    to_drop = {'nr_zespolu', 'typ'}
+    to_drop = {'typ'}
 
-    renames = {'odleglosc' : DISTANCE_STR,
-              'ulica_id' : STREET_ID_STR,
-              'nr_przystanku' : BUS_STOP_ID_STR}  
+    renames = {'odleglosc' : Aliases.DISTANCE.value,
+              'ulica_id' : Aliases.STREET_ID.value,
+              'nr_przystanku' : Aliases.BUS_STOP_NUM.value,
+              'nr_zespolu' : Aliases.BUS_STOP_GROUP_NUM.value}  
        
     modify_dataframe(df, to_drop, renames)       
     
 def modify_bus_stops_df(df):
     # original columns:
     # zespol, slupek, nazwa_zespolu, id_ulicy, szer_geo, dlug_geo, kierunek, obowiazuje_od
-    to_drop = {'nazwa_zespolu', 'obowiazuje_od'}
+    to_drop = {'obowiazuje_od'}
     
-    renames = {'zespol' : BUS_STOP_GROUP_NUM_STR,
-                'slupek' : BUS_STOP_NUM_STR,
-                'id_ulicy' : STREET_ID_STR,
-                'szer_geo' : LAT_STR,
-                'dlug_geo' : LON_STR,
-                'kierunek' : DIRECTION_STR}
+    renames = {'zespol' : Aliases.BUS_STOP_GROUP_NUM.value,
+                'slupek' : Aliases.BUS_STOP_NUM.value,
+                'id_ulicy' : Aliases.STREET_ID.value,
+                'szer_geo' : Aliases.LAT.value,
+                'dlug_geo' : Aliases.LON.value,
+                'kierunek' : Aliases.DIRECTION.value,
+                'nazwa_zespolu' : Aliases.PLACE.value}
     
     modify_dataframe(df, to_drop, renames)  
 
@@ -110,11 +122,11 @@ def modify_curr_positions_of_buses_df(df):
     # Lines, Lon, VehicleNumber, Time, Lat, Brigade
     to_drop = {'Brigade'}
     
-    renames = {'Lines' : LINE_STR,
-               'Lon' : LON_STR,
-               'VehicleNumber' : VEHICLE_NUMBER_STR,
-               'Time' : TIME_STR,
-               'Lat' : LAT_STR}
+    renames = {'Lines' : Aliases.LINE.value,
+               'Lon' : Aliases.LON.value,
+               'VehicleNumber' : Aliases.VEHICLE_NUMBER.value,
+               'Time' : Aliases.TIME.value,
+               'Lat' : Aliases.LAT.value}
     
     modify_dataframe(df, to_drop, renames)
     
@@ -123,9 +135,9 @@ def modify_time_tables_df(df):
     # line,nr_przystanku,nr_zespolu,symbol_2,symbol_1,brygada,kierunek,trasa,czas
     to_drop = {'symbol_2', 'symbol_1', 'brygada', 'trasa'}
     
-    renames = {'kierunek' : DIRECTION_STR,
-               'czas' : TIME_STR,
-               'nr_przystanku' : BUS_STOP_NUM_STR,
-               'nr_zespolu': BUS_STOP_GROUP_NUM_STR}
+    renames = {'kierunek' : Aliases.DIRECTION.value,
+               'czas' : Aliases.TIME.value,
+               'nr_przystanku' : Aliases.BUS_STOP_NUM.value,
+               'nr_zespolu': Aliases.BUS_STOP_GROUP_NUM.value}
     
     modify_dataframe(df, to_drop, renames)
