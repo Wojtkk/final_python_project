@@ -71,6 +71,37 @@ def plot_points_on_map(points_and_values, width = 10, height = 8, dot_size = 20)
         
     plt.axis('off') 
     plt.show()
+    
+def visualize_overspeed_percentage_within_line(data):
+    # Extracting bus line numbers and overspeed frequencies
+    bus_lines = [item[0] for item in data]
+    overspeed_freq = [item[1] for item in data]
+
+    # Creating the bar plot
+    plt.figure(figsize=(10, 6))
+    plt.bar(bus_lines, overspeed_freq, color='skyblue')
+    plt.title('Overspeed Frequency of Bus Lines')
+    plt.xlabel('Bus Line')
+    plt.ylabel('Overspeed Frequency (Percentage)')
+    plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+    
+    plt.tight_layout()
+    plt.show()
+    
+def visualize_overspeed_in_places(data):
+    # Extracting place names and overspeed percentages
+    places = data['place']
+    overspeed_percentage = data['overspeed_percentage']
+
+    # Creating the bar plot
+    plt.figure(figsize=(10, 6))
+    plt.barh(places, overspeed_percentage, color='skyblue')
+    plt.title('Overspeed Percentage at Different Places')
+    plt.xlabel('Overspeed Percentage')
+    plt.ylabel('Place')
+    plt.gca().invert_yaxis()  # Invert y-axis to have the highest value at the top
+    plt.tight_layout()
+    plt.show()
 
 if __name__ == '__main__':
     p1 = (52.187213539950555, 20.911449507005816, 0.5)

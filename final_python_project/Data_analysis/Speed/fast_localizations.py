@@ -1,14 +1,14 @@
 from math import floor
 import pandas as pd
 
-from speed import give_dataframe_of_coords_with_line_and_speed
+from Speed.speed import give_dataframe_of_coords_with_line_and_speed
 from Helpers.positions import get_distance_between_two_points_in_km
 
 MIN_NUM_OF_MEASUREMENTS = 10
 R_IN_KM = 0.15
 
 from Data_reading.modifying_dfs import Aliases as als
-from speed import SPEED_LIMIT, MAX_MEASURED_SPEED
+from Speed.speed import SPEED_LIMIT, MAX_MEASURED_SPEED
 
 def dict_of_dfs_by_column(dataframe, column_name):
     grouped = dataframe.groupby(column_name)
@@ -117,7 +117,6 @@ def give_places_with_overspeed_percent_df(bus_stops_df, speed_measurements_df):
     data_for_df = []
     for place, df_overspeed_percent in overspeed_by_place_dict.items():
         avg = df_overspeed_percent[als.OVERSPEED_PERCENTAGE.value].mean(skipna=True)
-        print(avg)
         row = [place, avg]
         data_for_df.append(row)
         
@@ -128,6 +127,18 @@ def give_fastest_places(bus_stops_df, speed_measurements_df, how_many = 30):
     df = give_places_with_overspeed_percent_df(bus_stops_df, speed_measurements_df)
     df = df.sort_values(by = als.OVERSPEED_PERCENTAGE.value, ascending = False)
     return df.head(how_many)
+
+def give_places_coords_to_plot_on_map(places_df, bus_stops_df):
+    merged_df = pd.merge(places_df, bus_stops_df, 
+                         how = 'left', 
+                         on = als.PLACE.value)
+    
+    unique_places_df = merged_df.drop_duplicates(als.PLACE.value)
+    result_data = []
+    for i, place in unique_places_df.iterrows():
+        pass
+        
+    
         
 if __name__ == '__main__':
     from speed import give_dataframe_of_coords_with_line_and_speed
