@@ -44,28 +44,28 @@ def give_selected_df(filename, late_hours):
 
 def give_modified_df(filename, funct_to_modify, late_hours):
     df = give_selected_df(filename, late_hours)
-    funct_to_modify(df)
+    funct_to_modify(df, late_hours)
     return df
 
 def give_modified_lines_stops_df(late_hours = False):
     return give_modified_df(LINE_STOPS_FILENAME, 
                             modify_stops_on_routes_df, 
-                            late_hours = True)
+                            late_hours)
 
 def give_modified_bus_stops_df(late_hours = False):
     return give_modified_df(BUS_STOPS_FILENAME, 
                             modify_bus_stops_df,
-                            late_hours = late_hours)
+                            late_hours)
 
 def give_modified_curr_positions_df(late_hours = False):
     return give_modified_df(CURR_POSITIONS_OF_BUSES_FILENAME, 
                             modify_curr_positions_of_buses_df,
-                            late_hours = late_hours)
+                            late_hours)
 
 def give_modified_time_tables_df(late_hours = False):
     return give_modified_df(TIME_TABLES_FILENAME, 
                             modify_time_tables_df,
-                            late_hours = late_hours)            
+                            late_hours)            
                 
 if __name__ == '__main__':
     df = give_modified_time_tables_df()

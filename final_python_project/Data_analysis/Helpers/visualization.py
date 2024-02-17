@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 import copy
 
+from Data_reading.modifying_dfs import Aliases as als
+
 IMAGE_FILE_NAME = 'warsaw.png'
 
 IMG_WIDTH = 1220
@@ -110,6 +112,24 @@ if __name__ == '__main__':
     p4 = (52.247213539950555, 20.911449507005816, 1)
     p = [p1, p2, p3, p4]
     plot_points_on_map(p, 15, 12)
+    
+def plot_most_delayed_bus_stops(delayed_bus_stops_df):
+    plt.figure(figsize=(10, 6))
+    plt.barh(delayed_bus_stops_df[als.PLACE.value], delayed_bus_stops_df[als.DELAY.value], color='skyblue')
+    plt.xlabel('Delay (minutes)')
+    plt.ylabel('Bus Stop')
+    plt.title('Most Delayed Bus Stops')
+    plt.gca().invert_yaxis()
+    plt.show()
+
+def plot_shortest_expected_waiting_bus_stops(shortest_waiting_bus_stops_df):
+    plt.figure(figsize=(10, 6))
+    plt.barh(shortest_waiting_bus_stops_df[als.PLACE.value], shortest_waiting_bus_stops_df[als.EXPECTED_WAITING.value], color='lightgreen')
+    plt.xlabel('Expected Waiting Time (minutes)')
+    plt.ylabel('Bus Stop')
+    plt.title('Bus Stops with Shortest Expected Waiting Time')
+    plt.gca().invert_yaxis()
+    plt.show()
     
     
 

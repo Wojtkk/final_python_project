@@ -4,6 +4,12 @@ from enum import Enum
 LON_STR = 'lon'
 LAT_STR = 'lat'
 
+EARLY_HOURS_START = 9
+EARLY_HOURS_STOP = 9
+
+LATE_HOURS_START = 15
+LATE_HOURS_STOP = 15
+
 class Aliases(Enum):
     BUS_STOP_NUM = 'bus_stop_num'
     BUS_STOP_GROUP_NUM = 'bus_stop_group'
@@ -30,7 +36,7 @@ class Aliases(Enum):
 
 MAX_NUM_OF_BUS_STOP = 1000
 
-def modify_dataframe(df, columns_to_drop, columns_renames_dict):
+def modify_dataframe(df, columns_to_drop, columns_renames_dict, late_hours = False):
     def drop_given_columns(df, columns_to_drop):
         df.drop(columns = columns_to_drop, axis = 1, inplace = True)
         
@@ -60,6 +66,16 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
             
             df[Aliases.TIME.value] = pd.to_datetime(df[Aliases.TIME.value])
     
+    def delete_out_of_time_range(df, late_hours):
+        if Aliases.TIME.value in df.columns:
+            hour_start = LATE_HOURS_START if late_hours else EARLY_HOURS_START
+            hour_end = LATE_HOURS_STOP if late_hours else EARLY_HOURS_STOP
+
+            HOUR_STR = 'hour'
+            df[HOUR_STR] = df[Aliases.TIME.value].dt.hour
+            df.drop(df[~((df[HOUR_STR] >= hour_start) & (df[HOUR_STR] <= hour_end))].index, inplace=True)
+            df.drop(columns=[HOUR_STR], inplace=True)
+    
     def add_bus_stop_id_column_if_possible(df):
         def mapping_on_bus_stops_id(num_of_group, num_of_bus_stop):
             return num_of_group * (MAX_NUM_OF_BUS_STOP + 1) + num_of_bus_stop
@@ -87,10 +103,12 @@ def modify_dataframe(df, columns_to_drop, columns_renames_dict):
     
     convert_time_format_if_possible(df)
     
+    delete_out_of_time_range(df, late_hours)
+    
     add_bus_stop_id_column_if_possible(df)
 
 
-def modify_stops_on_routes_df(df):
+def modify_stops_on_routes_df(df, late_hours = False):
     # original columns:
     # odleglosc, ulica_id, nr_zespolu, typ, nr_przystanku, line 
     to_drop = {'typ'}
@@ -100,9 +118,9 @@ def modify_stops_on_routes_df(df):
               'nr_przystanku' : Aliases.BUS_STOP_NUM.value,
               'nr_zespolu' : Aliases.BUS_STOP_GROUP_NUM.value}  
        
-    modify_dataframe(df, to_drop, renames)       
+    modify_dataframe(df, to_drop, renames, late_hours)       
     
-def modify_bus_stops_df(df):
+def modify_bus_stops_df(df, late_hours = False):
     # original columns:
     # zespol, slupek, nazwa_zespolu, id_ulicy, szer_geo, dlug_geo, kierunek, obowiazuje_od
     to_drop = {'obowiazuje_od'}
@@ -115,11 +133,12 @@ def modify_bus_stops_df(df):
                 'kierunek' : Aliases.DIRECTION.value,
                 'nazwa_zespolu' : Aliases.PLACE.value}
     
-    modify_dataframe(df, to_drop, renames)  
+    modify_dataframe(df, to_drop, renames, late_hours)  
 
-def modify_curr_positions_of_buses_df(df):
+def modify_curr_positions_of_buses_df(df, late_hours = False):
     # original columns:
     # Lines, Lon, VehicleNumber, Time, Lat, Brigade
+    print(late_hours)
     to_drop = {'Brigade'}
     
     renames = {'Lines' : Aliases.LINE.value,
@@ -128,9 +147,9 @@ def modify_curr_positions_of_buses_df(df):
                'Time' : Aliases.TIME.value,
                'Lat' : Aliases.LAT.value}
     
-    modify_dataframe(df, to_drop, renames)
+    modify_dataframe(df, to_drop, renames, late_hours)
     
-def modify_time_tables_df(df):
+def modify_time_tables_df(df, late_hours = False):
     # original columns:
     # line,nr_przystanku,nr_zespolu,symbol_2,symbol_1,brygada,kierunek,trasa,czas
     to_drop = {'symbol_2', 'symbol_1', 'brygada', 'trasa'}
@@ -140,4 +159,4 @@ def modify_time_tables_df(df):
                'nr_przystanku' : Aliases.BUS_STOP_NUM.value,
                'nr_zespolu': Aliases.BUS_STOP_GROUP_NUM.value}
     
-    modify_dataframe(df, to_drop, renames)
+    modify_dataframe(df, to_drop, renames, late_hours)

@@ -4,8 +4,8 @@ import pandas as pd
 from Speed.speed import give_dataframe_of_coords_with_line_and_speed
 from Helpers.positions import get_distance_between_two_points_in_km
 
-MIN_NUM_OF_MEASUREMENTS = 10
-R_IN_KM = 0.15
+MIN_NUM_OF_MEASUREMENTS = 3
+R_IN_KM = 0.9
 
 from Data_reading.modifying_dfs import Aliases as als
 from Speed.speed import SPEED_LIMIT, MAX_MEASURED_SPEED
@@ -130,14 +130,18 @@ def give_fastest_places(bus_stops_df, speed_measurements_df, how_many = 30):
 
 def give_places_coords_to_plot_on_map(places_df, bus_stops_df):
     merged_df = pd.merge(places_df, bus_stops_df, 
-                         how = 'left', 
+                         how = 'left',  
                          on = als.PLACE.value)
     
     unique_places_df = merged_df.drop_duplicates(als.PLACE.value)
     result_data = []
     for i, place in unique_places_df.iterrows():
-        pass
+        lat = place[als.LAT.value]
+        lon = place[als.LON.value]
+        value = place[als.OVERSPEED_PERCENTAGE.value]
+        result_data.append((lat, lon, 1))
         
+    return result_data
     
         
 if __name__ == '__main__':

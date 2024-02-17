@@ -1,4 +1,6 @@
+from Data_reading.modifying_dfs import Aliases as als
 import datetime
+
 import pandas as pd
 
 INF = 100000
@@ -16,9 +18,9 @@ def give_minutes_between_two_timestamps(t1, t2):
     diff = t2 - t1
     return diff.total_seconds() / 60
 
-def give_general_time_interval(bus_positoins_df):
-    min_time = min(bus_positoins_df[als.TIME.value])
-    max_time = max(bus_positoins_df[als.TIME.value])
+def give_general_time_interval(bus_positions_df):
+    min_time = min(bus_positions_df[als.TIME.value])
+    max_time = max(bus_positions_df[als.TIME.value])
     return min_time, max_time
 
 def calculate_expected_waiting_time(general_time_interval, line_arrives_time):  
@@ -28,7 +30,6 @@ def calculate_expected_waiting_time(general_time_interval, line_arrives_time):
     integral = 0
     for i in range(len(times) - 1):
         diff = give_minutes_between_two_timestamps(times[i], times[i+1])
-        print(diff)
         integral += diff * diff / 2
         
     interval_length = give_minutes_between_two_timestamps(start, end)
@@ -72,13 +73,13 @@ def dict_with_time_only(dict_of_arrivals_by_line):
 # and amount of time we are going to wait (time to neaarest vehicle of this line)
 # so it is going to be eaasy formula:
 
-def give_df_with_expected_waiting_time(arrivals_df, bus_positions_df):
+def give_df_with_expected_waiting_time_on_bus_stop(arrivals_df, bus_positions_df):
     dict_of_arrivals = dict_of_dfs_by_column(arrivals_df, als.BUS_STOP_ID.value)
 
     cols = [als.BUS_STOP_ID.value, als.EXPECTED_WAITING.value, als.LAT, als.LON]
     df_data = []
 
-    time_interval = give_general_time_interval(bus_positions_df)
+    time_interval = give_general_time_interval(arrivals_df)
     for bus_stop_id, arrive_df in dict_of_arrivals.items():
         dict_of_arrivals_by_line = dict_of_dfs_by_column(arrive_df, als.LINE.value)
         dict_time_only = dict_with_time_only(dict_of_arrivals_by_line)
@@ -105,7 +106,7 @@ def give_df_with_expected_waiting_time(arrivals_df, bus_positions_df):
 # for every time table time of arrival of line we want to have first arrival after it (or minute earlier)
 # then difference between these two times is delay, we take average of them
 
-def get_delays_data(dict_of_arrivals, dict_of_time_tables):
+def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
     for bus_stop_id, arrive_df in dict_of_arrivals.items():
         if bus_stop_id not in dict_of_time_tables.keys(): # to erase
             continue 
@@ -114,6 +115,8 @@ def get_delays_data(dict_of_arrivals, dict_of_time_tables):
         
         dict_time_table_line = dict_of_dfs_by_column(time_table_on_this_bus_stop_df,
                                                      als.LINE.value)
+        dict_time_only = dict_with_time_only(dict_time_table_line)
+        
         
         dict_of_arrivals_by_line = dict_of_dfs_by_column(arrive_df, als.LINE.value)
         dict_time_only = dict_with_time_only(dict_of_arrivals_by_line)
@@ -124,11 +127,11 @@ def get_delays_data(dict_of_arrivals, dict_of_time_tables):
         for line, list_of_arrival_times in dict_time_only.items():
             if line not in dict_time_table_line.keys():
                 continue
-            time_table_for_line = dict_time_table_line[line]
-            sum_delays = calc_delays(list_of_arrival_times, time_table_for_line)
+            time_table_for_line = dict_time_only[line]
+            print(time_table_for_line)
+            sum_delays = calc_delays(list_of_arrival_times, time_table_for_line, time_interval)
             
             counter += len(list_of_arrival_times)
-            sum_delays += count_and_sum_delay[1]
          
         if counter != 0:
             avg_delay = sum_delays / counter 
@@ -145,10 +148,12 @@ def give_df_with_avg_delay_on_bus_stop(arrivals_df, time_tables_df):
     dict_of_arrivals = dict_of_dfs_by_column(arrivals_df, als.BUS_STOP_ID.value)
     dict_of_time_tables = dict_of_dfs_by_column(time_tables_df, als.BUS_STOP_ID.value)
     
+    time_interval = give_general_time_interval(arrivals_df)
     cols = [als.BUS_STOP_ID.value, als.DELAY.value, als.LAT, als.LON]
-    result_df_data = get_delays_data(dict_of_arrivals, dict_of_time_tables)
+    result_df_data = get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval)
         
     df = pd.DataFrame(result_df_data, columns = cols)      
     return df
         
+    
     
