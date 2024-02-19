@@ -1,8 +1,16 @@
+""" 
+In this module we have functions doing same thing for different data:
+
+we download json with data and then convert it to DataFrame so we can
+save it as csv file.
+"""
+
+
 import pandas as pd 
 from time import sleep
 import json
 
-import Data_collecting.data_download as dd
+import data_download as dd
 
 LINE_STR = 'line'
 NUM_OF_STOP_STR = 'nr_przystanku'
@@ -18,23 +26,17 @@ BUS_STOPS_FILENAME = 'bus_stops.csv'
 CURR_POSITIONS_OF_BUSES_FILENAME = 'curr_position_of_buses.csv'
 TIME_TABLES_FILENAME = 'time_tables.csv'
 
-POSITIONS_UPDATE_TIME_SEC = 15
+POSITIONS_UPDATE_TIME_SEC = 11
 INTERVAL_IN_SECONDS = 16
 
-# this module needs to be tested again, 
-# because I was trying to test it but website with data was not working
-
-# functions with downloading and saving to dataframe
-
-def creat_df_stops_on_routes():
+def creat_df_lines_stops():
     bus_time_table = dd.get_public_transport_routes()
-    
-    lines_nums = bus_time_table.keys()
     
     bus_stops_to_df = []
     for line_num, routes_of_line in bus_time_table.items():
         for route in routes_of_line.values():
             bus_stops_on_route = route.values()
+            
             for bus_stop in bus_stops_on_route:
                 bus_stop[LINE_STR] = line_num
                 bus_stops_to_df.append(bus_stop)    
@@ -43,7 +45,6 @@ def creat_df_stops_on_routes():
     df = pd.concat(dfs, ignore_index = True)
     return df
   
-            
 def creat_df_bus_stops():
     bus_stops_data = dd.get_bus_stop_informations()
     
@@ -87,30 +88,30 @@ def creat_list_of_dfs_curr_positions_of_buses(interval_in_sec):
     concatenated_df = pd.concat(dfs, axis = 0, ignore_index = True)
     return concatenated_df
 
-
 def give_all_time_tables(df_stops_on_routes):
     result = []
     for i, row in df_stops_on_routes.iterrows():
         print(i)
-        if i >= 35:
+        if i >= 300:
             break
 
         line = row[LINE_STR]
-        num_of_stop = row[NUM_OF_STOP_STR]
-        num_of_stop_group = row[NUM_OF_STOP_GROUP_STR]
+        stop_num = row[NUM_OF_STOP_STR]
+        group_num = row[NUM_OF_STOP_GROUP_STR]
         
         time_table = dd.get_bus_time_table(line = line, 
-                                        bus_stop_nr = num_of_stop, 
-                                        bus_stop_id = num_of_stop_group)
+                                        bus_stop_nr = stop_num, 
+                                        bus_stop_id = group_num)
         
-        arrive_data = (line, num_of_stop, num_of_stop_group, time_table[RESULT_STR])
+        arrive_data = (line, stop_num, group_num, time_table[RESULT_STR])
         result.append(arrive_data)
         
     return result
 
 def creat_df_time_tables(df_stops_on_routes):
     data_for_df_time_tables = []
-    col_names_for_df_time_tables = [LINE_STR, NUM_OF_STOP_STR, NUM_OF_STOP_GROUP_STR]
+    col_names_for_df_time_tables = [LINE_STR, NUM_OF_STOP_STR, 
+                                    NUM_OF_STOP_GROUP_STR]
     colums_names_not_filled = True
 
     time_tables_arr = give_all_time_tables(df_stops_on_routes)
@@ -135,11 +136,10 @@ def creat_df_time_tables(df_stops_on_routes):
                              columns = col_names_for_df_time_tables)
     return dataframe
          
-
 def give_all_dataframes_and_their_titles():
     dataframes_to_save = []
     
-    df_stops_on_routes = creat_df_stops_on_routes()
+    df_stops_on_routes = creat_df_lines_stops()
     dataframes_to_save.append((STOPS_ON_ROUTES_FILENAME, df_stops_on_routes))
     
     df_bus_stops = creat_df_bus_stops()
@@ -154,6 +154,6 @@ def give_all_dataframes_and_their_titles():
     return dataframes_to_save    
 
 if __name__ == '__main__':  
-    df = creat_df_stops_on_routes()
+    df = creat_df_lines_stops()
     df1 = creat_df_time_tables(df)
     print(df1)

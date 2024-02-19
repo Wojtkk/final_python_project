@@ -1,7 +1,17 @@
+""" 
+In this module we are analysing data with positons of vehicles
+and we calculate speed of vehicles and places it was achieved.
+
+We also have some additional functions to be able to handle 
+data about speed more conveniently.
+"""
+
 import pandas as pd 
 
 from Helpers.positions import calculate_speed_in_km_per_h
 from Helpers.positions import calculate_middle_point
+
+from Helpers.dataframe_support import divide_on_dfs_by_given_column
 
 from Data_reading.modifying_dfs import Aliases as als
 
@@ -9,6 +19,8 @@ from Data_reading.reading import give_modified_lines_stops_df
 from Data_reading.reading import give_modified_bus_stops_df
 from Data_reading.reading import give_modified_curr_positions_df
 from Data_reading.reading import give_modified_time_tables_df
+
+
 
 SPEED_STR = 'speed'
 SPEED_LIMIT = 50
@@ -18,20 +30,11 @@ def sort_by_time(dataframe):
     df_sorted = dataframe.sort_values(by = als.TIME.value)
     return df_sorted
 
-def divide_on_dataframes_by_given_column_name(dataframe, column_name):
-    grouped = dataframe.groupby(column_name)
-
-    dataframes = {}
-    for category, group_df in grouped:
-        dataframes[category] = group_df 
-        
-    return dataframes
-
 def divide_on_dataframes_by_line(dataframe):
-    return divide_on_dataframes_by_given_column_name(dataframe, als.LINE.value)
+    return divide_on_dfs_by_given_column(dataframe, als.LINE.value)
 
 def divide_on_dataframes_by_vehicle_num(dataframe):
-    return divide_on_dataframes_by_given_column_name(dataframe, als.VEHICLE_NUMBER.value)
+    return divide_on_dfs_by_given_column(dataframe, als.VEHICLE_NUMBER.value)
 
 
 def give_dataframe_of_coords_with_line_and_speed(dataframe):
@@ -75,10 +78,8 @@ def give_list_of_allowed_speed_coords(dataframe_with_speed_col):
     allowed_speed = f"{SPEED_STR} < {SPEED_LIMIT}"
     return dataframe_with_speed_col.query(allowed_speed)
 
-
-def give_lines_with_most_frequent_overspeed(dataframe, minimal_num_of_vehicles = 3, how_many = 3):
-    coords_df = give_dataframe_of_coords_with_line_and_speed(dataframe)
-    
+def give_lines_with_most_frequent_overspeed_df(positions_df, minimal_num_of_vehicles = 3, how_many = 3):
+    coords_df = give_dataframe_of_coords_with_line_and_speed(positions_df)
     coords_for_line_dataframes = divide_on_dataframes_by_line(coords_df)
     
     result_for_each_line = []
@@ -93,10 +94,12 @@ def give_lines_with_most_frequent_overspeed(dataframe, minimal_num_of_vehicles =
         overspeed_percentage = overspeed_coords_num / total_coords
         result_for_each_line.append((line, overspeed_percentage))
     
-    result_for_each_line = sorted(result_for_each_line, key = lambda x: x[1])
-    length = len(result_for_each_line)
-    
-    return result_for_each_line[length - how_many: ]
+    result_for_each_line = sorted(result_for_each_line, key=lambda x: x[1])
+    result_for_each_line = result_for_each_line[-how_many:]
+
+    result_df = pd.DataFrame(result_for_each_line, 
+                             columns=[als.LINE.value, als.OVERSPEED_PERCENTAGE.value])
+    return result_df
 
 def give_data_with_allowed_and_not_allowed_speed(positions_df):
     with_speed_df = give_dataframe_of_coords_with_line_and_speed(positions_df)

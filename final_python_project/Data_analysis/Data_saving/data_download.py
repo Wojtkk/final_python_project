@@ -1,3 +1,7 @@
+""" 
+Just downloading data, nothing more.
+"""
+
 import requests
 import json
 
@@ -15,6 +19,7 @@ BUS_TIME_TABLE_URL = 'https://api.um.warszawa.pl/api/action/dbtimetable_get'
 BUS_TIME_TABLE_RESRC_ID = 'e923fa0e-d96c-43f9-ae6e-60518c9f3238'
 
 
+# creating dict out of kwargs
 def create_params(**kwargs):
     res_dict = {}
     for key, value in kwargs.items():
@@ -29,44 +34,36 @@ def get_data(url, parameters):
         return response.json()
     else:
         return None
-    
-def get_public_transport_routes(api_key = API_KEY, **kwargs):
-    parameters = create_params(apikey = api_key)
+  
+# downloading json, and returning data['result'] out of json  
+def get_public_transport_routes(**kwargs):
+    parameters = create_params(apikey = API_KEY)
     data = get_data(PUBLIC_TRANSPORT_ROUTES_URL, parameters)
     return data['result']
 
-def get_bus_stop_informations(api_key = API_KEY, 
-                             resource_id = BUS_STOP_COORDINATES_RESRC_ID,
-                             sortBy = None, 
-                             size = None, 
-                             **kwargs):
-    parameters = create_params(apikey = api_key, 
-                               id = resource_id, 
+# downloading json, and returning data['result'] out of json  
+def get_bus_stop_informations(sortBy = None, size = None, **kwargs):
+    parameters = create_params(apikey = API_KEY, 
+                               id = BUS_STOP_COORDINATES_RESRC_ID, 
                                sortBy = sortBy, 
                                size = size)
     data = get_data(BUS_STOP_COORDINATES_URL, parameters)
     return data['result']
 
-def get_curr_position_of_buses(api_key = API_KEY, 
-                               resource_id = CURRENT_BUSES_POSITIONS_RESRC_ID, 
-                               line = None, 
-                               **kwargs):
+# downloading json, and returning data['result'] out of json  
+def get_curr_position_of_buses(line = None, **kwargs):
     we_want_buses = 1
-    parameters = create_params(apikey = api_key, 
-                               resource_id = resource_id, 
+    parameters = create_params(apikey = API_KEY, 
+                               resource_id = CURRENT_BUSES_POSITIONS_RESRC_ID, 
                                line = line, 
                                type = we_want_buses)
     data = get_data(CURRENT_BUSES_POSITIONS_URL, parameters)
     return data['result']
 
-def get_bus_time_table(api_key = API_KEY, 
-                       resource_id = BUS_TIME_TABLE_RESRC_ID,
-                       bus_stop_nr = None, 
-                       bus_stop_id = None, 
-                       line = None, 
-                       **kwargs):
-    parameters = create_params(apikey = api_key, 
-                               id = resource_id, 
+# downloading json, but in this case we have mandatory arguments
+def get_bus_time_table(bus_stop_nr, bus_stop_id, line, **kwargs):
+    parameters = create_params(apikey = API_KEY, 
+                               id = BUS_TIME_TABLE_RESRC_ID, 
                                busstopNr = bus_stop_nr, 
                                busstopId = bus_stop_id, 
                                line = line)
@@ -74,10 +71,5 @@ def get_bus_time_table(api_key = API_KEY,
     return data
 
 
-def print_readable(data):
-    json_str = json.dumps(data, indent=2)
-    print(json_str)
-    
-# print_readable(get_bus_stop_informations())
 
 

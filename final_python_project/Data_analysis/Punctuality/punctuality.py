@@ -1,9 +1,19 @@
+""" 
+In this module we analyse two parameters of punctuality of buses -
+average waiting time and expected waiting time on bus, which
+is part of my own analysis and try to predict how long are 
+we going to wait on bus if we dont check time table.
+"""
+
+
 from Data_reading.modifying_dfs import Aliases as als
 import datetime
 
 import pandas as pd
 
 INF = 100000
+
+TO_EARLY_TIME = -1
 
 def dict_of_dfs_by_column(dataframe, column_name):
     grouped = dataframe.groupby(column_name)
@@ -23,7 +33,7 @@ def give_general_time_interval(bus_positions_df):
     max_time = max(bus_positions_df[als.TIME.value])
     return min_time, max_time
 
-def calculate_expected_waiting_time(general_time_interval, line_arrives_time):  
+def calculate_expected_waiting_time(general_time_interval, line_arrives_time):
     start = general_time_interval[0]
     end = general_time_interval[1]
     times = [start] + line_arrives_time + [end]
@@ -40,17 +50,19 @@ def calculate_expected_waiting_time(general_time_interval, line_arrives_time):
 def calc_delays(list_of_arrival_times, time_table_for_line, time_interval):
     end = time_interval[1]
     delay_sum = 0
+    counter = 0
     for scheduled_time in time_table_for_line:
         first_time_after = give_minutes_between_two_timestamps(scheduled_time, end)
         
         for real_arrive_times in list_of_arrival_times:
             single_delay = give_minutes_between_two_timestamps(scheduled_time, real_arrive_times)
-            if single_delay >= -1:
+            if single_delay >= TO_EARLY_TIME:
                 first_time_after = min(first_time_after, single_delay, 0)
             
         delay_sum += first_time_after
+        counter += 1
         
-    return delay_sum
+    return delay_sum / counter if counter != 0 else 0
         
 def dict_with_time_only(dict_of_arrivals_by_line):
     new_dict = {}
@@ -61,19 +73,26 @@ def dict_with_time_only(dict_of_arrivals_by_line):
     return new_dict
     
 
-# this function is supposed to give dataframe in format:
-# (bus_stop_id, expected_waiting)
-# expected waiting is for given bus stop is defined this way:
-# we randomly select line and then go to given bus stop 
-# time we wait is first vehicle of selected line which will appear after we arrive 
-# how we are going to calculate it for the given bus stop?
-# we will take average of expected time for every line and then for line:
-# for line we will take general time interval, and then we will sum up 
-# probability of appearing in given minute on bus stop (for every minute the same)
-# and amount of time we are going to wait (time to neaarest vehicle of this line)
-# so it is going to be eaasy formula:
-
 def give_df_with_expected_waiting_time_on_bus_stop(arrivals_df, bus_positions_df):
+    """
+    This function generates a DataFrame in the format:
+    (bus_stop_id, expected_waiting, lat, lon), where the expected_waiting
+    for a given bus stop is calculated based on the arrival times
+    of vehicles.
+
+    Expected waiting time for a bus stop is defined as follows:
+    - Randomly select a bus line.
+    - The expected waiting time is the time until the arrival of the
+      next vehicle on that line after reaching the bus stop.
+
+    The expected waiting time for each bus stop is calculated by
+    averaging the expected waiting times for every line that serves
+    that bus stop.
+
+    The calculation involves summing up the probability of a vehicle
+    arriving at the bus stop in a given minute and the time it takes
+    to reach the nearest vehicle of that line.
+    """
     dict_of_arrivals = dict_of_dfs_by_column(arrivals_df, als.BUS_STOP_ID.value)
 
     cols = [als.BUS_STOP_ID.value, als.EXPECTED_WAITING.value, als.LAT, als.LON]
@@ -99,13 +118,6 @@ def give_df_with_expected_waiting_time_on_bus_stop(arrivals_df, bus_positions_df
     df = pd.DataFrame(df_data, columns = cols)      
     return df
 
-# this function is supposed to give dataframe in format:
-# (bus_stop_id, average_delay, bus_stop_lat, bus_stop_lon)
-# formula will be average of all delays:
-# for given bus stop we want to have the following:
-# for every time table time of arrival of line we want to have first arrival after it (or minute earlier)
-# then difference between these two times is delay, we take average of them
-
 def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
     for bus_stop_id, arrive_df in dict_of_arrivals.items():
         if bus_stop_id not in dict_of_time_tables.keys(): # to erase
@@ -128,13 +140,11 @@ def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
             if line not in dict_time_table_line.keys():
                 continue
             time_table_for_line = dict_time_only[line]
-            print(time_table_for_line)
-            sum_delays = calc_delays(list_of_arrival_times, time_table_for_line, time_interval)
+            sum_delays += calc_delays(list_of_arrival_times, time_table_for_line, time_interval)
             
-            counter += len(list_of_arrival_times)
-         
-        if counter != 0:
-            avg_delay = sum_delays / counter 
+        size = len(list_of_arrival_times) 
+        if size != 0:
+            avg_delay = sum_delays / size
         else:
             avg_delay = 0
                 
@@ -145,6 +155,12 @@ def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
     return result_df_data
 
 def give_df_with_avg_delay_on_bus_stop(arrivals_df, time_tables_df):
+    """ 
+    this function is supposed to give dataframe in format:
+    (bus_stop_id, average_delay, bus_stop_lat, bus_stop_lon)
+    average delay on bus stop is just average delay of every scheduled
+    arrival on this bus stop
+    """
     dict_of_arrivals = dict_of_dfs_by_column(arrivals_df, als.BUS_STOP_ID.value)
     dict_of_time_tables = dict_of_dfs_by_column(time_tables_df, als.BUS_STOP_ID.value)
     

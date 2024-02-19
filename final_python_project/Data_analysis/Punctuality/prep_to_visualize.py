@@ -1,3 +1,8 @@
+""" 
+In this module we are preparing data regarding punctuality so
+it can be ploted conveniently.
+"""
+
 import pandas as pd 
 
 from Data_reading.modifying_dfs import Aliases as als
@@ -17,10 +22,26 @@ def shortest_expected_waiting_bus_stops(expected_by_bus_stop_df, bus_stops_df, h
     df = df.head(how_many)
     return df[[als.PLACE.value, als.EXPECTED_WAITING.value]]
 
+
+ 
 def bus_stops_to_plot_on_map_where_better_random_time(expected_by_bus_stop_df,
                                                       delay_by_bus_stop_df,
                                                       bus_stops_df,
                                                       planning_delay = 4):
+    """ 
+    in this function we verify hypothesis:
+    are there any bus stops where at certain hours if we will do the following:
+    select random line from this bus stop, and go according to the time table
+
+    then we will loose more time because of 'planning_delay' than just
+    walk on this bus stop at random time and then wait on this line 
+    as long as we need
+
+    Maybe buses are so out of schedule, that there is no use 
+    in checking time tables at certain bus stops??
+
+    if such bus stops exist function give us data to plot them on map
+    """
     df = expected_by_bus_stop_df.merge(delay_by_bus_stop_df, on = als.BUS_STOP_ID.value)
     df = df.merge(bus_stops_df, on = als.BUS_STOP_ID.value)
     

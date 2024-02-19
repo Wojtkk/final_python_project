@@ -6,16 +6,24 @@ BUS_STOPS_FILENAME = 'bus_stops.csv'
 CURR_POSITIONS_OF_BUSES_FILENAME = 'curr_position_of_buses.csv'
 TIME_TABLES_FILENAME = 'time_tables.csv'
 
-from Data_reading.modifying_dfs import modify_stops_on_routes_df
-from Data_reading.modifying_dfs import modify_bus_stops_df
-from Data_reading.modifying_dfs import modify_curr_positions_of_buses_df
-from Data_reading.modifying_dfs import modify_time_tables_df
-
 CSV = 'csv'
 
 DATA_COLLECTING_MODULE = Path('Data_saving')
-PATH_TO_DATA_DIR_EARLY = DATA_COLLECTING_MODULE / 'for_data' # to be for_early_data
-PATH_TO_DATA_DIR_LATE = DATA_COLLECTING_MODULE / 'for_data' # to be for_late_data
+
+# to be for_early_data
+PATH_TO_DATA_DIR_EARLY = DATA_COLLECTING_MODULE / 'for_data_early' 
+PATH_TO_DATA_DIR_EARLY = DATA_COLLECTING_MODULE / 'for_data' # to remove !!!
+
+# to be for_late_data
+PATH_TO_DATA_DIR_LATE = DATA_COLLECTING_MODULE / 'for_data_late' 
+PATH_TO_DATA_DIR_LATE = DATA_COLLECTING_MODULE / 'for_data' # to remove !!!
+
+
+# so we can make function which reads and modify
+from Data_reading.modifying_dfs import modify_line_stops_df
+from Data_reading.modifying_dfs import modify_bus_stops_df
+from Data_reading.modifying_dfs import modify_curr_positions_of_buses_df
+from Data_reading.modifying_dfs import modify_time_tables_df
 
 def give_df_from_csv_files(path_to_file):
     df = pd.read_csv(path_to_file)
@@ -49,9 +57,9 @@ def give_modified_df(filename, funct_to_modify, late_hours):
 
 def give_modified_lines_stops_df(late_hours = False):
     return give_modified_df(LINE_STOPS_FILENAME, 
-                            modify_stops_on_routes_df, 
+                            modify_line_stops_df, 
                             late_hours)
-
+    
 def give_modified_bus_stops_df(late_hours = False):
     return give_modified_df(BUS_STOPS_FILENAME, 
                             modify_bus_stops_df,
@@ -61,15 +69,13 @@ def give_modified_curr_positions_df(late_hours = False):
     return give_modified_df(CURR_POSITIONS_OF_BUSES_FILENAME, 
                             modify_curr_positions_of_buses_df,
                             late_hours)
+    
 
 def give_modified_time_tables_df(late_hours = False):
     return give_modified_df(TIME_TABLES_FILENAME, 
                             modify_time_tables_df,
                             late_hours)            
                 
-if __name__ == '__main__':
-    df = give_modified_time_tables_df()
-    print(df)
 
 
 

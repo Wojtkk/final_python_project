@@ -1,8 +1,27 @@
+""" 
+In this module we want to calculate around which bus stop groups there was
+high percentage of overspeed in our measurements.
+
+To make it effective we are dividing whole area at sectors. 
+Sectors are squares of size 'R_IN_KM'.
+
+And then for every bus stop we check overspeed percentage in sector in which
+bus stop is placed in.
+
+And final result for group of bus stops is average of overspeed percentage 
+around bus stops belonging to this group.
+
+So we define localization as name of bus stops group and in code its
+often reffered as 'PLACE'.
+"""
+
 from math import floor
 import pandas as pd
 
 from Speed.speed import give_dataframe_of_coords_with_line_and_speed
-from Helpers.positions import get_distance_between_two_points_in_km
+from Helpers.positions import distance_between_two_points_in_km
+
+from Helpers.dataframe_support import dict_of_dfs_by_column
 
 MIN_NUM_OF_MEASUREMENTS = 3
 R_IN_KM = 0.9
@@ -10,18 +29,9 @@ R_IN_KM = 0.9
 from Data_reading.modifying_dfs import Aliases as als
 from Speed.speed import SPEED_LIMIT, MAX_MEASURED_SPEED
 
-def dict_of_dfs_by_column(dataframe, column_name):
-    grouped = dataframe.groupby(column_name)
-
-    dataframes = {}
-    for category, group_df in grouped:
-        dataframes[category] = group_df 
-        
-    return dataframes
-
 def give_sector_indexes(lower_left_coords, point_coords):
     def give_in_which_part(start_coords, p_coords):
-        partial_dist = get_distance_between_two_points_in_km(start_coords, p_coords)
+        partial_dist = distance_between_two_points_in_km(start_coords, p_coords)
         index = partial_dist // R_IN_KM
         return int(index)
     
@@ -81,7 +91,6 @@ def get_area_coords(bus_stop_df, speed_df):
     right_upper = (max_lat, max_lon) 
     return (left_lower, right_upper)
 
-# in this function we want to calculate df: (bus_stop_id, place, percent_of_overspeed)
 def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measurements_df):
     area_coords = get_area_coords(bus_stops_df, speed_measurements_df)
     overspeed_in_sectors = give_overspeed_df_by_sector(speed_measurements_df, area_coords)
@@ -106,8 +115,6 @@ def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measuremen
     result_df = pd.DataFrame(df_data, columns = cols)
     return result_df
     
-# in this function we want to calculate df: 
-# (group_name, avg_percent_of_overspeed_in_group_name)
 def give_places_with_overspeed_percent_df(bus_stops_df, speed_measurements_df):
     bus_stop_overspeed_df = give_overspeed_percentage_around_bus_stops_df(bus_stops_df, 
                                                                         speed_measurements_df)

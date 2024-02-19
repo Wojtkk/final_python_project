@@ -1,7 +1,21 @@
-import pandas as pd
-from Data_reading.modifying_dfs import Aliases as als
-from Helpers.positions import get_distance_between_two_points_in_km
+""" 
+In this module from data with positions of vehicles we want to extract
+times of arrivals at bus stops.
 
+We need such data to analyse punctuality.
+
+Idea of handling arrivals is like that: 
+if data is updated after 10 s and 10 s is actually
+shortest time bus can spend on bus stop than if bus arrives at bus stop
+than we will have its position when its standing there in our data.
+"""
+
+import pandas as pd
+
+from Data_reading.modifying_dfs import Aliases as als
+
+from Helpers.positions import distance_between_two_points_in_km
+from Helpers.dataframe_support import divide_on_dfs_by_given_column
 
 from Data_reading.reading import give_modified_lines_stops_df
 from Data_reading.reading import give_modified_bus_stops_df
@@ -9,20 +23,11 @@ from Data_reading.reading import give_modified_curr_positions_df
 from Data_reading.reading import give_modified_time_tables_df
 
 BUS_STOP_RANGE_IN_KM = 0.015
+
 INF = 1000000000
 
 NORTH_COORDS = (52.37124014293236, 20.9833612220712)
 WEST_COORDS = (52.232228462386196, 20.789954779824953)
-
-
-def divide_on_dfs_by_given_column(dataframe, column_name):
-    grouped = dataframe.groupby(column_name)
-
-    dataframes = {}
-    for category, group_df in grouped:
-        dataframes[category] = group_df 
-        
-    return dataframes
 
 def group_df_by_vehicles(df):
     return divide_on_dfs_by_given_column(df, als.VEHICLE_NUMBER.value)
@@ -30,12 +35,28 @@ def group_df_by_vehicles(df):
 def group_by_line(df):
     return divide_on_dfs_by_given_column(df, als.LINE.value)
 
-
 def df_line_stops_with_coords(line_stops_df, bus_stops_df):
     joined_df = pd.merge(line_stops_df, bus_stops_df, on = als.BUS_STOP_ID.value)
     return joined_df
 
+
 def calc_arrival_times(single_line_stops, single_veh_positions):
+    """ 
+    we return Dataframe with columns:
+    (line, veh_number, time, lat, lon, bus_stop_id)
+    every row of such Dataframe 
+    corresponds to one arrival of specific vehicle at bus stop
+
+    argument 'single_line_stops' is Dataframe with 
+    bus stops on which this vehicle may stop
+    'single_veh_positions' is Dataframe with positions of specific vehicle
+    
+    we calculate distance of both bus stops and positions from some another point
+    and then we sort them by this distance
+    and then we iterate through sorted and for elements being neighbours 
+    on this list we check if they are really that close 
+    so we can say that vehicle arrived on bus stop
+    """
     def give_stops_and_lines_list(line_stops, veh_positions):
         lst = []
         for i, elem in line_stops.iterrows():
@@ -56,7 +77,7 @@ def calc_arrival_times(single_line_stops, single_veh_positions):
         stops_and_positions = give_stops_and_lines_list(line_stops, veh_positions)
         for i, elem in enumerate(stops_and_positions):
             elem_coords = (elem[0], elem[1])
-            d = get_distance_between_two_points_in_km(rel_point, (elem_coords))
+            d = distance_between_two_points_in_km(rel_point, (elem_coords))
             stops_and_positions[i] = (elem[0], elem[1], elem[2], d)
             
         stops_and_positions = sorted(stops_and_positions, key = lambda x: x[3])
@@ -75,7 +96,7 @@ def calc_arrival_times(single_line_stops, single_veh_positions):
                 
                 coords1 = (elem[0], elem[1])
                 coords2 = (prev[0], prev[1])
-                d = get_distance_between_two_points_in_km(coords1, coords2)
+                d = distance_between_two_points_in_km(coords1, coords2)
                 if d < BUS_STOP_RANGE_IN_KM:
                     time = elem[2] if not is_bus else prev[2] 
                     coords = coords1 if is_bus else coords2
@@ -107,7 +128,7 @@ def calc_arrival_times(single_line_stops, single_veh_positions):
             als.LAT.value, als.LON.value, als.BUS_STOP_ID.value]
     arrivals_data = []
     
-    rel_points = [NORTH_COORDS]#, WEST_COORDS]
+    rel_points = [NORTH_COORDS, WEST_COORDS]
     for p in rel_points:
         arrivals = calc_with_rel_point(p, single_line_stops, single_veh_positions)
         concatenate_if_not_none(arrivals_data, arrivals)
@@ -118,7 +139,13 @@ def calc_arrival_times(single_line_stops, single_veh_positions):
     else:
         return None
 
-def give_df_with_arrivals(df_with_positions, lines_stops_df, bus_stops_df  ):
+def give_df_with_arrivals(df_with_positions, lines_stops_df, bus_stops_df):
+    """ 
+    in this function we divide data for every vehicle so we can use function
+    'calc_arrival_times(...)' and then we return Dataframe with arrivals
+    which is concatenated DataFrames from function 'calc_arrival_times(...)'
+    for every vehicle
+    """
     dfs_positions_of_vehicle = group_df_by_vehicles(df_with_positions)
     
     df_of_line_stops = df_line_stops_with_coords(lines_stops_df, bus_stops_df)
@@ -131,6 +158,9 @@ def give_df_with_arrivals(df_with_positions, lines_stops_df, bus_stops_df  ):
         iter += 1
         
         line = single_veh_positions[als.LINE.value].iloc[0]
+        if line not in dict_of_bus_stops_for_lines.keys():
+            continue
+        
         single_line_stops = dict_of_bus_stops_for_lines[line]
         
         veh_arrivals_df = calc_arrival_times(single_line_stops, single_veh_positions)
@@ -144,11 +174,8 @@ def give_df_with_arrivals(df_with_positions, lines_stops_df, bus_stops_df  ):
     return df_no_duplicates
 
 if __name__ == '__main__':
-    
     pos_df = give_modified_curr_positions_df()
     lines_df = give_modified_lines_stops_df()
-    
-    
     
     bus_stops_df = give_modified_bus_stops_df()
     
