@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: bus_analysis
+Version: 0.1
+Summary: Project for python course.
+Home-page: https://github.com/Wojtkk/final_python_project.git
+Author: Wojciech Krupiński
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: requests
+Requires-Dist: geopy
+Requires-Dist: datetime
