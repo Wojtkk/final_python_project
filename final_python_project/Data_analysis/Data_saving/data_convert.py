@@ -154,19 +154,15 @@ def creat_df_time_tables(df_stops_on_routes):
 def give_all_dataframes_and_their_titles():
     dataframes_to_save = []
     
-    # print("xd")
     df_stops_on_routes = creat_df_lines_stops()
-    # dataframes_to_save.append((STOPS_ON_ROUTES_FILENAME, df_stops_on_routes))
-    # 
-    # print("xddd")
-    # df_bus_stops = creat_df_bus_stops()
-    # dataframes_to_save.append((BUS_STOPS_FILENAME, df_bus_stops))
+    dataframes_to_save.append((STOPS_ON_ROUTES_FILENAME, df_stops_on_routes))
     
-    # print("dsfesa")
-    # df_curr_positions_of_buses = creat_list_of_dfs_curr_positions_of_buses(INTERVAL_IN_SECONDS)
-    # dataframes_to_save.append((CURR_POSITIONS_OF_BUSES_FILENAME, df_curr_positions_of_buses))
+    df_bus_stops = creat_df_bus_stops()
+    dataframes_to_save.append((BUS_STOPS_FILENAME, df_bus_stops))
     
-    print("dxf")
+    df_curr_positions_of_buses = creat_list_of_dfs_curr_positions_of_buses(INTERVAL_IN_SECONDS)
+    dataframes_to_save.append((CURR_POSITIONS_OF_BUSES_FILENAME, df_curr_positions_of_buses))
+    
     df_time_tables = creat_df_time_tables(df_stops_on_routes)
     dataframes_to_save.append((TIME_TABLES_FILENAME, df_time_tables))
     

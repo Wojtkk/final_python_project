@@ -183,7 +183,6 @@ if __name__ == '__main__':
     len(df_to_vis)
     
     points_and_values = [(r[als.LAT.value], r[als.LON.value], 0.5) for index, r in df_to_vis.iterrows()]   
-    print(len(points_and_values))  
     from Helpers.visualization import plot_points_on_map
     plot_points_on_map(points_and_values)   
     

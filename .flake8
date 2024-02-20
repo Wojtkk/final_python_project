@@ -1,4 +1,4 @@
 [flake8]
 ignore = E203, E501, W503
-exclude = vanv,setup.py,tests,README.md
-max-line-length = 19
+exclude = setup.py,tests,README.md
+max-line-length = 84

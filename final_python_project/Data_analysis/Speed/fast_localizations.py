@@ -70,7 +70,6 @@ def give_overspeed_df_by_sector(speed_measurements_df, area_coords):
         sectors_2d_array[i, j, 0] += is_overspeed
         sectors_2d_array[i, j, 1] += 1
     
-    print(sectors_2d_array)    
     return sectors_2d_array
 
 
@@ -145,7 +144,5 @@ if __name__ == '__main__':
     speed = give_dataframe_of_coords_with_line_and_speed(positions)
     bus_stops = give_modified_bus_stops_df()
     
-    print(give_fastest_places(bus_stops, speed))
-        
     
     

@@ -56,18 +56,13 @@ def calc_delays(list_of_arrival_times, time_table_for_line, time_interval):
     for scheduled_time in time_table_for_line:
         first_time_after = give_minutes_between_two_timestamps(scheduled_time, end)
         
-        print("xd")
         some_arrival = False
         for real_arrive_time in list_of_arrival_times:
             single_delay = give_minutes_between_two_timestamps(scheduled_time, real_arrive_time)
-            print("xd")
-            print(single_delay)
             if single_delay > TO_EARLY_TIME:
                 first_time_after = min(first_time_after, single_delay)
                 some_arrival = True
                 
-        print(first_time_after)
-            
         if some_arrival:
             delay_sum += first_time_after
             counter += 1
@@ -151,19 +146,14 @@ def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
                 continue
             
             time_table_for_line = dict_time_only_time_table[line]
-            print(list_of_arrival_times)
-            print(time_table_for_line)
-            print("xdddddd")
             sum_delays += calc_delays(list_of_arrival_times, time_table_for_line, time_interval)
             
         size = len(dict_time_only_real_arrives.items())
-        print(sum_delays, size)
         if size != 0:
             avg_delay = sum_delays / size
         else:
             avg_delay = 0
             
-        print(bus_stop_id)
         coords = (arrive_df[als.LAT.value].iloc[0], 
                   arrive_df[als.LON.value].iloc[0])
         result_df_data.append([bus_stop_id, avg_delay, coords[0], coords[1]])
