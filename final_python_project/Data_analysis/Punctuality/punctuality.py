@@ -5,7 +5,6 @@ is part of my own analysis and try to predict how long are
 we going to wait on bus if we dont check time table.
 """
 
-
 from Data_reading.modifying_dfs import Aliases as als
 import datetime
 
@@ -25,8 +24,11 @@ def dict_of_dfs_by_column(dataframe, column_name):
     return dataframes
 
 def give_minutes_between_two_timestamps(t1, t2):
-    diff = t2 - t1
-    return diff.total_seconds() / 60
+    hour1, minute1 = t1.hour, t1.minute
+    hour2, minute2 = t2.hour, t2.minute
+    
+    diff_minutes = abs((hour2 - hour1) * 60 + (minute2 - minute1))
+    return diff_minutes
 
 def give_general_time_interval(bus_positions_df):
     min_time = min(bus_positions_df[als.TIME.value])
@@ -54,13 +56,21 @@ def calc_delays(list_of_arrival_times, time_table_for_line, time_interval):
     for scheduled_time in time_table_for_line:
         first_time_after = give_minutes_between_two_timestamps(scheduled_time, end)
         
-        for real_arrive_times in list_of_arrival_times:
-            single_delay = give_minutes_between_two_timestamps(scheduled_time, real_arrive_times)
-            if single_delay >= TO_EARLY_TIME:
-                first_time_after = min(first_time_after, single_delay, 0)
+        print("xd")
+        some_arrival = False
+        for real_arrive_time in list_of_arrival_times:
+            single_delay = give_minutes_between_two_timestamps(scheduled_time, real_arrive_time)
+            print("xd")
+            print(single_delay)
+            if single_delay > TO_EARLY_TIME:
+                first_time_after = min(first_time_after, single_delay)
+                some_arrival = True
+                
+        print(first_time_after)
             
-        delay_sum += first_time_after
-        counter += 1
+        if some_arrival:
+            delay_sum += first_time_after
+            counter += 1
         
     return delay_sum / counter if counter != 0 else 0
         
@@ -119,35 +129,41 @@ def give_df_with_expected_waiting_time_on_bus_stop(arrivals_df, bus_positions_df
     return df
 
 def get_delays_data(dict_of_arrivals, dict_of_time_tables, time_interval):
+    result_df_data = []
     for bus_stop_id, arrive_df in dict_of_arrivals.items():
         if bus_stop_id not in dict_of_time_tables.keys(): # to erase
             continue 
-        else:
-            time_table_on_this_bus_stop_df = dict_of_time_tables[bus_stop_id]
+        
+        time_table_on_this_bus_stop_df = dict_of_time_tables[bus_stop_id]
         
         dict_time_table_line = dict_of_dfs_by_column(time_table_on_this_bus_stop_df,
                                                      als.LINE.value)
-        dict_time_only = dict_with_time_only(dict_time_table_line)
+        dict_time_only_time_table = dict_with_time_only(dict_time_table_line)
         
         
         dict_of_arrivals_by_line = dict_of_dfs_by_column(arrive_df, als.LINE.value)
-        dict_time_only = dict_with_time_only(dict_of_arrivals_by_line)
+        dict_time_only_real_arrives = dict_with_time_only(dict_of_arrivals_by_line)
         
         sum_delays = 0
         counter = 0
-        result_df_data = []
-        for line, list_of_arrival_times in dict_time_only.items():
+        for line, list_of_arrival_times in dict_time_only_real_arrives.items():
             if line not in dict_time_table_line.keys():
                 continue
-            time_table_for_line = dict_time_only[line]
+            
+            time_table_for_line = dict_time_only_time_table[line]
+            print(list_of_arrival_times)
+            print(time_table_for_line)
+            print("xdddddd")
             sum_delays += calc_delays(list_of_arrival_times, time_table_for_line, time_interval)
             
-        size = len(list_of_arrival_times) 
+        size = len(dict_time_only_real_arrives.items())
+        print(sum_delays, size)
         if size != 0:
             avg_delay = sum_delays / size
         else:
             avg_delay = 0
-                
+            
+        print(bus_stop_id)
         coords = (arrive_df[als.LAT.value].iloc[0], 
                   arrive_df[als.LON.value].iloc[0])
         result_df_data.append([bus_stop_id, avg_delay, coords[0], coords[1]])

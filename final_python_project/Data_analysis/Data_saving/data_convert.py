@@ -27,11 +27,12 @@ CURR_POSITIONS_OF_BUSES_FILENAME = 'curr_position_of_buses.csv'
 TIME_TABLES_FILENAME = 'time_tables.csv'
 
 POSITIONS_UPDATE_TIME_SEC = 11
-INTERVAL_IN_SECONDS = 16
+INTERVAL_IN_SECONDS = 9000
 
 def creat_df_lines_stops():
     bus_time_table = dd.get_public_transport_routes()
     
+    print("here")
     bus_stops_to_df = []
     for line_num, routes_of_line in bus_time_table.items():
         for route in routes_of_line.values():
@@ -64,26 +65,37 @@ def creat_df_bus_stops():
 def creat_df_curr_positions_of_buses():
     buses_position_data = dd.get_curr_position_of_buses()
     
+    error = False
     dfs = []
     for bus_position in buses_position_data:
         try:
             df = pd.json_normalize(bus_position)
             dfs.append(df)
         except:
-            print(buses_position_data)
+            print(bus_position)
+            error = True
             break
         
-    result_df = pd.concat(dfs, ignore_index=True)
+    if not error:
+        result_df = pd.concat(dfs, ignore_index=True)
+    else: 
+        result_df = None
 
     return result_df
 
 def creat_list_of_dfs_curr_positions_of_buses(interval_in_sec):
     iterations = interval_in_sec // POSITIONS_UPDATE_TIME_SEC + 1
     dfs = []
-    for i in range(iterations):
+    successes = 0
+    while successes <= 250:
+        print(successes)
         df = creat_df_curr_positions_of_buses()
-        dfs.append(df)
-        sleep(POSITIONS_UPDATE_TIME_SEC)
+        if df is not None:
+            successes += 1
+            dfs.append(df)
+            sleep(POSITIONS_UPDATE_TIME_SEC)
+        else: 
+            print("fail")
         
     concatenated_df = pd.concat(dfs, axis = 0, ignore_index = True)
     return concatenated_df
@@ -92,16 +104,19 @@ def give_all_time_tables(df_stops_on_routes):
     result = []
     for i, row in df_stops_on_routes.iterrows():
         print(i)
-        if i >= 300:
+        if i >= 1500:
             break
 
         line = row[LINE_STR]
         stop_num = row[NUM_OF_STOP_STR]
         group_num = row[NUM_OF_STOP_GROUP_STR]
         
-        time_table = dd.get_bus_time_table(line = line, 
-                                        bus_stop_nr = stop_num, 
-                                        bus_stop_id = group_num)
+        try:
+            time_table = dd.get_bus_time_table(line = line, 
+                                            bus_stop_nr = stop_num, 
+                                            bus_stop_id = group_num)
+        except Exception:
+            continue
         
         arrive_data = (line, stop_num, group_num, time_table[RESULT_STR])
         result.append(arrive_data)
@@ -139,15 +154,19 @@ def creat_df_time_tables(df_stops_on_routes):
 def give_all_dataframes_and_their_titles():
     dataframes_to_save = []
     
+    # print("xd")
     df_stops_on_routes = creat_df_lines_stops()
-    dataframes_to_save.append((STOPS_ON_ROUTES_FILENAME, df_stops_on_routes))
+    # dataframes_to_save.append((STOPS_ON_ROUTES_FILENAME, df_stops_on_routes))
+    # 
+    # print("xddd")
+    # df_bus_stops = creat_df_bus_stops()
+    # dataframes_to_save.append((BUS_STOPS_FILENAME, df_bus_stops))
     
-    df_bus_stops = creat_df_bus_stops()
-    dataframes_to_save.append((BUS_STOPS_FILENAME, df_bus_stops))
+    # print("dsfesa")
+    # df_curr_positions_of_buses = creat_list_of_dfs_curr_positions_of_buses(INTERVAL_IN_SECONDS)
+    # dataframes_to_save.append((CURR_POSITIONS_OF_BUSES_FILENAME, df_curr_positions_of_buses))
     
-    df_curr_positions_of_buses = creat_list_of_dfs_curr_positions_of_buses(INTERVAL_IN_SECONDS)
-    dataframes_to_save.append((CURR_POSITIONS_OF_BUSES_FILENAME, df_curr_positions_of_buses))
-    
+    print("dxf")
     df_time_tables = creat_df_time_tables(df_stops_on_routes)
     dataframes_to_save.append((TIME_TABLES_FILENAME, df_time_tables))
     

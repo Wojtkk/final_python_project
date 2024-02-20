@@ -1,3 +1,9 @@
+""" 
+In this module we are reading and data and calling modifying functions on it.
+
+In arguments we also specify if we want to read data from early hours or late ones.
+"""
+
 import pandas as pd
 from pathlib import Path
 
@@ -12,11 +18,9 @@ DATA_COLLECTING_MODULE = Path('Data_saving')
 
 # to be for_early_data
 PATH_TO_DATA_DIR_EARLY = DATA_COLLECTING_MODULE / 'for_data_early' 
-PATH_TO_DATA_DIR_EARLY = DATA_COLLECTING_MODULE / 'for_data' # to remove !!!
 
 # to be for_late_data
 PATH_TO_DATA_DIR_LATE = DATA_COLLECTING_MODULE / 'for_data_late' 
-PATH_TO_DATA_DIR_LATE = DATA_COLLECTING_MODULE / 'for_data' # to remove !!!
 
 
 # so we can make function which reads and modify

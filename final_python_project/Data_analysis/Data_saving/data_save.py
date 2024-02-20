@@ -31,4 +31,4 @@ def save_all_dataframes_we_need_to_save(name_of_folder_to_save_in):
             print(f"Error saving {filename}: {e}")
 
 if __name__ == "__main__":
-    save_all_dataframes_we_need_to_save('for_data')
+    save_all_dataframes_we_need_to_save('for_timetables_v2')

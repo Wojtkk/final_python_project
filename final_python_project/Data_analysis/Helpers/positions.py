@@ -6,6 +6,12 @@ we have coordinates as our data.
 import geopy.distance
 from datetime import datetime
 
+""" 
+These coords tell us where is Warsaw and near Warsaw area
+"""
+LOWER_LEFT_COORDS = (51.50938792373637, 20.306482867590515)
+UPPER_RIGHT_COORDS = (52.910664755632995, 21.90115562951321)
+
 SECONDS_IN_HOUR = 3600
 
 def calculate_time_in_sec_between_dates(time_start, time_end):

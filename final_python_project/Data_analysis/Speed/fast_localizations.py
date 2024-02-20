@@ -15,19 +15,24 @@ So we define localization as name of bus stops group and in code its
 often reffered as 'PLACE'.
 """
 
-from math import floor
 import pandas as pd
+import numpy as np
+
+from math import floor
 
 from Speed.speed import give_dataframe_of_coords_with_line_and_speed
 from Helpers.positions import distance_between_two_points_in_km
+from Helpers.positions import LOWER_LEFT_COORDS, UPPER_RIGHT_COORDS
 
-from Helpers.dataframe_support import dict_of_dfs_by_column
-
-MIN_NUM_OF_MEASUREMENTS = 3
-R_IN_KM = 0.9
+from Helpers.dataframe_support import divide_on_dfs_by_given_column
 
 from Data_reading.modifying_dfs import Aliases as als
 from Speed.speed import SPEED_LIMIT, MAX_MEASURED_SPEED
+
+AREA_COORDS = (LOWER_LEFT_COORDS, UPPER_RIGHT_COORDS)
+
+MIN_NUM_OF_MEASUREMENTS = 3
+R_IN_KM = 0.6
 
 def give_sector_indexes(lower_left_coords, point_coords):
     def give_in_which_part(start_coords, p_coords):
@@ -40,59 +45,38 @@ def give_sector_indexes(lower_left_coords, point_coords):
     
     our_point = (point_coords[0], lower_left_coords[1])
     row_index = give_in_which_part(lower_left_coords, our_point)
-    return (column_index, row_index)   
+    return row_index, column_index 
 
-def init_sectors_2d_data(area_coords, elem = None):
+def init_sectors_2d_data(area_coords):
     rows_num = give_sector_indexes(area_coords[0], area_coords[1])[1] + 1
     cols_num = give_sector_indexes(area_coords[0], area_coords[1])[0] + 1
     
-    row = [elem] * cols_num
-    arr_2d = []
-    for i in range(rows_num):
-        arr_2d.append(row)
-        
-    return arr_2d
+    return np.zeros((rows_num, cols_num, 2), dtype=int)
 
-def give_overspeed_df_by_sector(speed_measurements_df, area_coords):    
-    lower_left_coords = area_coords[0]
-    upper_right_coords = area_coords[1]
+def give_overspeed_df_by_sector(speed_measurements_df, area_coords):
+    sectors_2d_array = init_sectors_2d_data(area_coords)
     
-    sectors_2d_list = init_sectors_2d_data(area_coords, elem = (0, 0))
-    
-    for i, measurement in speed_measurements_df.iterrows():
+    for _, measurement in speed_measurements_df.iterrows():
         speed = measurement[als.SPEED.value]
         point_coords = (measurement[als.LAT.value], measurement[als.LON.value])
         
-        i, j = give_sector_indexes(lower_left_coords, point_coords)
+        i, j = give_sector_indexes(area_coords[0], point_coords)
         
         if SPEED_LIMIT < speed < MAX_MEASURED_SPEED:
             is_overspeed = 1
-        elif speed < MAX_MEASURED_SPEED:
+        else:
             is_overspeed = 0
             
-        x = sectors_2d_list[i][j][0] + is_overspeed
-        y = sectors_2d_list[i][j][1] + 1
-        new_tuple = (x, y)
-        sectors_2d_list[i][j] = new_tuple
-        
-    return sectors_2d_list
-
-def get_area_coords(bus_stop_df, speed_df):
-    lat = als.LAT.value
-    lon = als.LON.value
-    df1 = bus_stop_df
-    df2 = speed_df
-    min_lat = min(df1[lat].min(), df2[lat].min())
-    max_lat = max(df1[lat].max(), df2[lat].max()) 
+        sectors_2d_array[i, j, 0] += is_overspeed
+        sectors_2d_array[i, j, 1] += 1
     
-    min_lon = min(df1[lon].min(), df2[lon].min())
-    max_lon = max(df1[lon].max(), df2[lon].max())
-    left_lower = (min_lat, min_lon)
-    right_upper = (max_lat, max_lon) 
-    return (left_lower, right_upper)
+    print(sectors_2d_array)    
+    return sectors_2d_array
 
-def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measurements_df):
-    area_coords = get_area_coords(bus_stops_df, speed_measurements_df)
+
+def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measurements_df,
+                                                  min_num_of_measurements = MIN_NUM_OF_MEASUREMENTS):
+    area_coords = (AREA_COORDS[0], AREA_COORDS[1])
     overspeed_in_sectors = give_overspeed_df_by_sector(speed_measurements_df, area_coords)
     
     cols = [als.BUS_STOP_ID.value, als.PLACE.value, als.OVERSPEED_PERCENTAGE.value]
@@ -103,10 +87,9 @@ def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measuremen
         
         lower_left_coords = area_coords[0]
         row, col = give_sector_indexes(lower_left_coords, (lat, lon))
-        sum = overspeed_in_sectors[col][row][0]
-        counter = overspeed_in_sectors[col][row][1]
+        sum = overspeed_in_sectors[row][col][0]
+        counter = overspeed_in_sectors[row][col][1]
         avg = sum / counter if counter != 0 and counter >= MIN_NUM_OF_MEASUREMENTS else 0
-        
         
         id = bus[als.BUS_STOP_ID.value]
         place = bus[als.PLACE.value]
@@ -118,7 +101,8 @@ def give_overspeed_percentage_around_bus_stops_df(bus_stops_df, speed_measuremen
 def give_places_with_overspeed_percent_df(bus_stops_df, speed_measurements_df):
     bus_stop_overspeed_df = give_overspeed_percentage_around_bus_stops_df(bus_stops_df, 
                                                                         speed_measurements_df)
-    overspeed_by_place_dict = dict_of_dfs_by_column(bus_stop_overspeed_df, als.PLACE.value)
+    overspeed_by_place_dict = divide_on_dfs_by_given_column(bus_stop_overspeed_df, 
+                                                            als.PLACE.value)
     
     cols = [als.PLACE.value, als.OVERSPEED_PERCENTAGE.value]
     data_for_df = []

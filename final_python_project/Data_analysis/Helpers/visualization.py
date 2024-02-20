@@ -2,6 +2,9 @@
 In this module we have functions to plot data on map of Warsaw.
 As well as functions plotting data on conventional charts.
 """
+import random
+
+MAX_NUM_OF_POINTS_TO_PLOT = 1300
 
 import cv2
 import matplotlib.pyplot as plt
@@ -82,7 +85,11 @@ def plot_points_on_map(points_and_values, title = 'Stats on map',
     image = load_map_image()
     plt.imshow(image)
     
+    if len(points_and_values) >= MAX_NUM_OF_POINTS_TO_PLOT:
+        points_and_values = random.sample(points_and_values, 
+                                          MAX_NUM_OF_POINTS_TO_PLOT)
     points_and_values = normalise_points_and_values(points_and_values)
+        
     for lat, lon, color in points_and_values:
         plt.scatter(lon, lat, color = color, s = dot_size)  
         
@@ -113,17 +120,17 @@ def visualize_overspeed_percentage_within_line(data):
               xlabel = 'Bus Line',
               ylabel = 'Overspeed Frequency (Percentage)')
 
-def visualize_overspeed_in_places(data):
+def visualize_overspeed_in_places(data, title):
     plot_barh(data, x_col='place', y_col='overspeed_percentage',
-              title='Overspeed Percentage at Different Places',
+              title=title,
               xlabel='Overspeed Percentage',
               ylabel='Place')
 
-def plot_most_delayed_bus_stops(delayed_bus_stops_df):
+def plot_most_delayed_bus_stops(delayed_bus_stops_df, title):
     plot_barh(delayed_bus_stops_df, 
               x_col = als.PLACE.value, 
               y_col = als.DELAY.value,
-              title = 'Most Delayed Bus Stops',
+              title = title,
               xlabel = 'Delay (minutes)',
               ylabel = 'Bus Stop')
 

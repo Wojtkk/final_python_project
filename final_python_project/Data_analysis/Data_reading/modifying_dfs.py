@@ -16,12 +16,14 @@ These things make further work much easier.
 import pandas as pd
 from enum import Enum
 
-EARLY_HOUR = 10
+from Helpers.positions import LOWER_LEFT_COORDS, UPPER_RIGHT_COORDS
 
-LATE_HOUR = 15
+EARLY_HOUR = 12
 
-DEFAULT_DATE = '1900-01-01'
-SPECIFIC_DATE = '18-02-2024'
+LATE_HOUR = 17
+
+ONLY_HOUR = '10:00:00'
+SPECIFIC_DATE = '2024-02-19'
 
 MAX_NUM_OF_BUS_STOP = 1000
 
@@ -73,19 +75,23 @@ def modify_dataframe(df, columns_to_drop,
     
     def delete_out_of_time_range(df, late_hours):
         if Aliases.TIME.value in df.columns:
-            hour = LATE_HOUR if late_hours else EARLY_HOUR
-
             HOUR_STR = 'hour'
             DATE_STR = 'date'
             df[HOUR_STR] = df[Aliases.TIME.value].dt.hour
             df[DATE_STR] = df[Aliases.TIME.value].dt.date
-    
-            df.drop(df[~((df[HOUR_STR] == hour) 
-                        & ((df[DATE_STR] ==  pd.to_datetime(SPECIFIC_DATE).date()) 
-                        | (df[DATE_STR] == pd.to_datetime(DEFAULT_DATE).date())))].index, 
-                        inplace=True)
+            
+            
+            hour = LATE_HOUR if late_hours else EARLY_HOUR
+            specific_date = pd.to_datetime(SPECIFIC_DATE).date()
+            default_date = pd.to_datetime(ONLY_HOUR).date()
+            
+            condition = ((df[HOUR_STR] == hour) &
+                        ((df[DATE_STR] == specific_date) | 
+                        (df[DATE_STR] == default_date)))
+
+            df.drop(df[~condition].index, inplace=True)
             df.drop(columns=[HOUR_STR, DATE_STR], inplace=True)
-    
+        
     def add_bus_stop_id_column_if_possible(df):
         def mapping_on_bus_stops_id(num_of_group, num_of_bus_stop):
             return num_of_group * (MAX_NUM_OF_BUS_STOP + 1) + num_of_bus_stop
@@ -105,12 +111,22 @@ def modify_dataframe(df, columns_to_drop,
                                     Aliases.BUS_STOP_NUM.value}
             drop_given_columns(df, unnecessary_cols_now)
 
+    def delete_out_of_warsaw_data(df):
+        cols = df.columns
+        if Aliases.LAT.value in cols and Aliases.LON.value in cols:
+            df.drop(df[(df[Aliases.LAT.value] > UPPER_RIGHT_COORDS[0]) |
+                        (df[Aliases.LON.value] > UPPER_RIGHT_COORDS[1]) |
+                        (df[Aliases.LAT.value] < LOWER_LEFT_COORDS[0]) |
+                        (df[Aliases.LON.value] < LOWER_LEFT_COORDS[1])].index, inplace=True)
+
+    
     drop_given_columns(df, columns_to_drop)
     rename_given_columns(df, columns_renames_dict)
     remove_bus_depots_data(df)
     convert_time_format_if_possible(df)
     delete_out_of_time_range(df, late_hours)
     add_bus_stop_id_column_if_possible(df)
+    delete_out_of_warsaw_data(df)
 
 def modify_line_stops_df(df, late_hours = False):
     """ 
@@ -148,9 +164,8 @@ def modify_curr_positions_of_buses_df(df, late_hours = False):
     """
     original columns:
     Lines, Lon, VehicleNumber, Time, Lat, Brigade
-    print(late_hours)
-    to_drop = {'Brigade'}
     """
+    to_drop = {'Brigade'}
     renames = {'Lines' : Aliases.LINE.value,
                'Lon' : Aliases.LON.value,
                'VehicleNumber' : Aliases.VEHICLE_NUMBER.value,
